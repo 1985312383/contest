@@ -1,110 +1,163 @@
-import csv
-import re
+
+# -*- coding: utf-8 -*-
+
 import numpy as np
-from matplotlib import pyplot as plt
+from sklearn.preprocessing import OneHotEncoder
+from sklearn.model_selection import train_test_split  # 数据集的分割函数
+from sklearn.preprocessing import StandardScaler  # 数据预处理
+from sklearn import metrics
+import pandas as pd
+from sklearn.utils import shuffle
+import matplotlib.pyplot as plt
 
-thre = 1.7  # 要调整的参数,这个是阈值
-iteration_num = 2  # 要调整的参数，这个是迭代次数
+# 四个锚点坐标
+A0 = [0, 0, 1300]
+A1 = [5000, 0, 1700]
+A2 = [0, 5000, 1700]
+A3 = [5000, 5000, 1300]
 
-'''
-清洗数据
-'''
-def cleanData(kind):
-    for k in range(1, 325):
-        with open(f"./data/附件1：UWB数据集/{kind}数据/{k}.{kind}.txt", "r") as f:  # 打开文件
-            f.readline()  # 去掉第一行
-            data = f.readlines()  # 读取文件
+class RELM_HiddenLayer:
+    """
+        正则化的极限学习机
+        :param x: 初始化学习机时的训练集属性X
+        :param num: 学习机隐层节点数
+        :param C: 正则化系数的倒数
+    """
+    def __init__(self, x, num, C=10):
+        row = x.shape[0]
+        columns = x.shape[1]
+        rnd = np.random.RandomState()
 
-        f.close()
+        # 权重w
+        self.w = rnd.uniform(-1, 1, (columns, num))
 
-        data_num = len(data) / 4
-        if int(data_num) - data_num < -0.1:
-            raise ValueError("数据数量不对!")
+        # 偏置b
+        self.b = np.zeros([row, num], dtype=float)
 
-        initial_time = re.search(":.*:([0-9]*)", data[0], flags=0)  # 获取初始数据序列
-        initial_time = int(initial_time.group(1))
+        for i in range(num):
+            rand_b = rnd.uniform(-0.4, 0.4)
+            for j in range(row):
+                self.b[j, i] = rand_b
 
-        Measures = []
-        for i in range(int(data_num)):
-            measure = []
-            for j in range(4):
-                device = []
-                anchor = re.search(":[0-9]*?:RR:0:([0-9]):[0-9]*?:([0-9]*?):[0-9]*?:([0-9]*)", data[4 * i + j], flags=0)
-                device.extend([int(anchor.group(3)) - initial_time, anchor.group(1), anchor.group(2)])  # 获取数据序号、设备号、测量值
-                device = list(map(int, device))
-                measure.append(device)  # 一个measure就是四个设备拿到的四份数据
-            Measures.append(measure)
-        Measures = np.array(Measures)  # Measures是三维数组是获取的所有测量数据
+        self.H0 = np.matrix(self.sigmoid(np.dot(x, self.w) + self.b))
+        self.C = C
+        self.P = (self.H0.H * self.H0 + len(x) / self.C).I
+        # .T:共轭矩阵,.H:共轭转置,.I:逆矩阵
 
-        # 注意newline
-        with open(f"cleaned_data/{kind}数据/{k}.{kind}.csv", "w+", newline="") as datacsv:
-            # dialect为打开csv文件的方式，默认是excel，delimiter="\t"参数指写入的时候的分隔符
-            csvwriter = csv.writer(datacsv, dialect=("excel"))
-            # csv文件插入一行数据，把下面列表中的每一项放入一个单元格（可以用循环插入多行）
-            csvwriter.writerow(["数据序列", "设备号", "测量值"])
-            for i in range(len(Measures)):
-                csvwriter.writerows(Measures[i])
+    @staticmethod
+    def sigmoid(x):
+        """
+            激活函数sigmoid
+            :param x: 训练集中的X
+            :return: 激活值
+        """
+        return 1.0 / (1 + np.exp(-x))
 
-        datacsv.close()
+    @staticmethod
+    def softplus(x):
+        """
+            激活函数 softplus
+            :param x: 训练集中的X
+            :return: 激活值
+        """
+        return np.log(1 + np.exp(x))
 
-        normalized_device_data = []
-        normalized_device_data_x = []
-        device_data = []
-        device_data_x = []
-        for i in range(4):
-            device_data.append(Measures[:, i, 2])
-            device_data_x.append(np.arange(len(Measures[:, i, 2])))
-            normalized_device_data.append(device_data[i] / np.max(Measures[:, i, 2]))  # 最大值归一化
-        normalized_device_data_x = device_data_x
+    @staticmethod
+    def tanh(x):
+        """
+            激活函数tanh
+            :param x: 训练集中的X
+            :return: 激活值
+        """
+        return (np.exp(x) - np.exp(-x)) / (np.exp(x) + np.exp(-x))
 
-        '''
-        画图，在每一组数据中，循环清洗数据时请勿取消注释
-        '''
-        # try:
-        #     plt.figure()
-        #     plt.rcParams['font.sans-serif'] = ['SimHei']  # 用来正常显示中文标签
-        #     plt.rcParams['axes.unicode_minus'] = False  # 用来正常显示负号
-        #     plt.title(u"4个UWB锚点在正常环境下的数据图(未滤波)")
-        #     plt.xlabel(u"数据序号")
-        #     plt.ylabel(u"归一化后的测量值")
-        #
-        #     normalized_device_data = np.array(normalized_device_data)
-        #     normalized_device_data_x = np.array(normalized_device_data_x)
-        #     device_data = np.array(device_data)
-        #     device_data_x = np.array(device_data_x)
-        #
-        #     for i in range(4):
-        #         # plt.plot(np.array(normalized_device_data_x[i,:]), np.array(normalized_device_data[i,:]),label=u"UWB锚点"+str(i))\
-        #         plt.plot(np.array(device_data_x[i, :]), np.array(device_data[i, :]), label=u"UWB锚点" + str(i))
-        #         plt.legend(loc="lower right")
-        #
-        #     plt.figure(2)
-        #     plt.title(u"4个UWB锚点在正常环境下的数据图(已滤波)")
-        #     plt.xlabel(u"数据序号")
-        #     plt.ylabel(u"归一化后的测量值")
-        #     device_mean = np.mean(device_data, axis=1)
-        #     device_std = np.std(device_data, axis=1)
-        #
-        #     low_thre = device_mean - device_std * thre
-        #     high_thre = device_mean + device_std * thre
-        #
-        #     for _ in range(iteration_num):
-        #         for i in range(4):
-        #             for j in range(len(device_data[i, :])):
-        #                 if device_data[i, j] < low_thre[i] or device_data[i, j] > high_thre[i]:
-        #                     device_data[i, j] = device_mean[i]
-        #
-        #     for i in range(4):
-        #         # plt.plot(np.array(device_data_x[i,:]), np.array(device_data[i,:]/np.max(device_data[i,:])),label=u"UWB锚点"+str(i))
-        #         plt.plot(np.array(device_data_x[i, :]), np.array(device_data[i, :]),
-        #                  label=u"UWB锚点" + str(i))
-        #         plt.legend(loc="lower right")
-        #     plt.show()
-        #     plt.pause()
-        # except:
-        #     pass
+    # 回归问题 训练
+    def regressor_train(self, T):
+        """
+            初始化了学习机后需要传入对应标签T
+            :param T: 对应属性X的标签T
+            :return: 隐层输出权值beta
+        """
+        #       all_m = np.dot(self.P, self.H0.H)
+        #       self.beta = np.dot(all_m, T)
+        #       return self.beta
+        all_m = np.dot(self.P, self.H0.H)
+        self.beta = np.dot(all_m, T)
+        return self.beta
+    # 回归问题 测试
+    def regressor_test(self, test_x):
+        """
+            传入待预测的属性X并进行预测获得预测值
+            :param test_x:被预测标签的属性X
+            :return: 被预测标签的预测值T
+        """
+        b_row = test_x.shape[0]
+        h = self.sigmoid(np.dot(test_x, self.w) + self.b[:b_row, :])
+        #     h = self.sigmoid(np.dot(test_x, self.w) + self.b[:b_row, :])
+        result = np.dot(h, self.beta)
+        #       result =np.argmax(result,axis=1)
+        return result
 
 
-if __name__ == '__main__':
-    cleanData("正常")
-    cleanData("异常")
+# In[]
+
+# 数据读取及划分
+url = 'cleaned_data/正常数据/1.正常.csv'
+data = pd.read_csv(url, sep=',', header='infer')
+data = np.array(data)
+print(data)
+data = shuffle(data)
+X_data = data[:, :23]
+Y = data[:, 23:26]
+print(Y)
+
+# Y=np.array(Y).reshape(-1, 1)
+# print(Y)
+# labels=np.asarray(pd.get_dummies(Y),dtype=np.int32)
+# asarray是将输入数据（get_dummies）转换为矩阵形式
+# what=pd.get_dummies(Y)
+# get_dummies是将数据分成类，然后每一个数据，对应分类结果上写1，其他都是0
+# print(what)
+
+# 下面3行代码就是将数据集随即按照num_train分成训练集和测试集，数据量大，就分了两部分
+
+num_train = 0.1
+X_train, X_, Y_train, Y_ = train_test_split(X_data, Y, test_size=num_train, random_state=20)
+X_test, X_vld, Y_test, Y_vld = train_test_split(X_, Y_, test_size=0.1, random_state=20)
+
+# In[]
+
+# 数据标准化处理
+stdsc = StandardScaler()
+X_train = stdsc.fit_transform(X_train)
+X_test = stdsc.fit_transform(X_test)
+X_vld = stdsc.fit_transform(X_vld)
+Y_true = Y_test
+# Y_true=np.argmax(Y_test,axis=1)
+
+
+# In[]
+
+# 不同隐藏层结果对比
+
+result = []
+
+for j in range(1, 30, 5):
+    a = RELM_HiddenLayer(X_train, j)
+    a.regressor_train(Y_train)
+    num_data = len(X_test)
+    predict = a.regressor_test(X_test)
+    print(predict)
+
+    #    acc=metrics.precision_score(predict,Y_true, average='macro')
+    #    plt.scatter(2,4,s=200)
+
+    for i in range(1, num_data, 1):
+        print('hidden- %d,predict1：%f,predict2：%f,predict3：%f' % (j, predict[i, 0], predict[i, 1], predict[i, 2]))
+
+    # print(predict[i])
+    # plt.scatter(i,predict[i].tolist())
+#    plt.plot(i, predict[i],linewidth=5)
+# plt.show()
+#    result.append(pre)
+#    print('hidden- %d,acc：%f'%(j,acc))
