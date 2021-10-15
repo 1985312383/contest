@@ -1,10 +1,679 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AnalysisUIOptions">
+    <option name="SCOPE_TYPE" value="3" />
+  </component>
   <component name="AutoImportSettings">
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="fc8808b1-84b7-49b9-acf6-9eee17eaa766" name="更改" comment="批量清洗数据" />
+    <list default="true" id="fc8808b1-84b7-49b9-acf6-9eee17eaa766" name="更改" comment="批量清洗数据">
+      <change afterPath="$PROJECT_DIR$/1_makeTrainingDataset.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/1_plotFourPictures.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/2_getRightModel.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/submit/task1/异常数据/1.异常.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/submit/task1/异常数据/1.异常.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/submit/task1/异常数据/100.异常.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/submit/task1/异常数据/100.异常.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/submit/task1/正常数据/109.正常.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/submit/task1/正常数据/109.正常.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/submit/task1/正常数据/24.正常.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/submit/task1/正常数据/24.正常.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/submit/task2/right_data.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FanTao1.py" beforeDir="false" afterPath="$PROJECT_DIR$/FanTao1.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cleaned_data/异常数据/1.异常.csv" beforeDir="false" afterPath="$PROJECT_DIR$/cleaned_data/异常数据/1.异常.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cleaned_data/异常数据/10.异常.csv" beforeDir="false" afterPath="$PROJECT_DIR$/cleaned_data/异常数据/10.异常.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cleaned_data/异常数据/100.异常.csv" beforeDir="false" afterPath="$PROJECT_DIR$/cleaned_data/异常数据/100.异常.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cleaned_data/异常数据/101.异常.csv" beforeDir="false" afterPath="$PROJECT_DIR$/cleaned_data/异常数据/101.异常.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cleaned_data/异常数据/102.异常.csv" beforeDir="false" afterPath="$PROJECT_DIR$/cleaned_data/异常数据/102.异常.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cleaned_data/异常数据/103.异常.csv" beforeDir="false" afterPath="$PROJECT_DIR$/cleaned_data/异常数据/103.异常.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cleaned_data/异常数据/104.异常.csv" beforeDir="false" afterPath="$PROJECT_DIR$/cleaned_data/异常数据/104.异常.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cleaned_data/异常数据/105.异常.csv" beforeDir="false" afterPath="$PROJECT_DIR$/cleaned_data/异常数据/105.异常.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cleaned_data/异常数据/106.异常.csv" beforeDir="false" afterPath="$PROJECT_DIR$/cleaned_data/异常数据/106.异常.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cleaned_data/异常数据/107.异常.csv" beforeDir="false" afterPath="$PROJECT_DIR$/cleaned_data/异常数据/107.异常.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cleaned_data/异常数据/108.异常.csv" beforeDir="false" afterPath="$PROJECT_DIR$/cleaned_data/异常数据/108.异常.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cleaned_data/异常数据/109.异常.csv" beforeDir="false" afterPath="$PROJECT_DIR$/cleaned_data/异常数据/109.异常.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cleaned_data/异常数据/11.异常.csv" beforeDir="false" afterPath="$PROJECT_DIR$/cleaned_data/异常数据/11.异常.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cleaned_data/异常数据/110.异常.csv" beforeDir="false" afterPath="$PROJECT_DIR$/cleaned_data/异常数据/110.异常.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cleaned_data/异常数据/111.异常.csv" beforeDir="false" afterPath="$PROJECT_DIR$/cleaned_data/异常数据/111.异常.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cleaned_data/异常数据/112.异常.csv" beforeDir="false" afterPath="$PROJECT_DIR$/cleaned_data/异常数据/112.异常.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cleaned_data/异常数据/113.异常.csv" beforeDir="false" afterPath="$PROJECT_DIR$/cleaned_data/异常数据/113.异常.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cleaned_data/异常数据/114.异常.csv" beforeDir="false" afterPath="$PROJECT_DIR$/cleaned_data/异常数据/114.异常.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cleaned_data/异常数据/115.异常.csv" beforeDir="false" afterPath="$PROJECT_DIR$/cleaned_data/异常数据/115.异常.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cleaned_data/异常数据/116.异常.csv" beforeDir="false" afterPath="$PROJECT_DIR$/cleaned_data/异常数据/116.异常.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cleaned_data/异常数据/117.异常.csv" beforeDir="false" afterPath="$PROJECT_DIR$/cleaned_data/异常数据/117.异常.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cleaned_data/异常数据/118.异常.csv" beforeDir="false" afterPath="$PROJECT_DIR$/cleaned_data/异常数据/118.异常.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cleaned_data/异常数据/119.异常.csv" beforeDir="false" afterPath="$PROJECT_DIR$/cleaned_data/异常数据/119.异常.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cleaned_data/异常数据/12.异常.csv" beforeDir="false" afterPath="$PROJECT_DIR$/cleaned_data/异常数据/12.异常.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cleaned_data/异常数据/120.异常.csv" beforeDir="false" afterPath="$PROJECT_DIR$/cleaned_data/异常数据/120.异常.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cleaned_data/异常数据/121.异常.csv" beforeDir="false" afterPath="$PROJECT_DIR$/cleaned_data/异常数据/121.异常.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cleaned_data/异常数据/122.异常.csv" beforeDir="false" afterPath="$PROJECT_DIR$/cleaned_data/异常数据/122.异常.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cleaned_data/异常数据/123.异常.csv" beforeDir="false" afterPath="$PROJECT_DIR$/cleaned_data/异常数据/123.异常.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cleaned_data/异常数据/124.异常.csv" beforeDir="false" afterPath="$PROJECT_DIR$/cleaned_data/异常数据/124.异常.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cleaned_data/异常数据/125.异常.csv" beforeDir="false" afterPath="$PROJECT_DIR$/cleaned_data/异常数据/125.异常.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cleaned_data/异常数据/126.异常.csv" beforeDir="false" afterPath="$PROJECT_DIR$/cleaned_data/异常数据/126.异常.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cleaned_data/异常数据/127.异常.csv" beforeDir="false" afterPath="$PROJECT_DIR$/cleaned_data/异常数据/127.异常.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cleaned_data/异常数据/128.异常.csv" beforeDir="false" afterPath="$PROJECT_DIR$/cleaned_data/异常数据/128.异常.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cleaned_data/异常数据/129.异常.csv" beforeDir="false" afterPath="$PROJECT_DIR$/cleaned_data/异常数据/129.异常.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cleaned_data/异常数据/13.异常.csv" beforeDir="false" afterPath="$PROJECT_DIR$/cleaned_data/异常数据/13.异常.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cleaned_data/异常数据/130.异常.csv" beforeDir="false" afterPath="$PROJECT_DIR$/cleaned_data/异常数据/130.异常.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cleaned_data/异常数据/131.异常.csv" beforeDir="false" afterPath="$PROJECT_DIR$/cleaned_data/异常数据/131.异常.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cleaned_data/异常数据/132.异常.csv" beforeDir="false" afterPath="$PROJECT_DIR$/cleaned_data/异常数据/132.异常.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cleaned_data/异常数据/133.异常.csv" beforeDir="false" afterPath="$PROJECT_DIR$/cleaned_data/异常数据/133.异常.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cleaned_data/异常数据/134.异常.csv" beforeDir="false" afterPath="$PROJECT_DIR$/cleaned_data/异常数据/134.异常.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cleaned_data/异常数据/135.异常.csv" beforeDir="false" afterPath="$PROJECT_DIR$/cleaned_data/异常数据/135.异常.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cleaned_data/异常数据/136.异常.csv" beforeDir="false" afterPath="$PROJECT_DIR$/cleaned_data/异常数据/136.异常.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cleaned_data/异常数据/137.异常.csv" beforeDir="false" afterPath="$PROJECT_DIR$/cleaned_data/异常数据/137.异常.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cleaned_data/异常数据/138.异常.csv" beforeDir="false" afterPath="$PROJECT_DIR$/cleaned_data/异常数据/138.异常.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cleaned_data/异常数据/139.异常.csv" beforeDir="false" afterPath="$PROJECT_DIR$/cleaned_data/异常数据/139.异常.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cleaned_data/异常数据/14.异常.csv" beforeDir="false" afterPath="$PROJECT_DIR$/cleaned_data/异常数据/14.异常.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cleaned_data/异常数据/140.异常.csv" beforeDir="false" afterPath="$PROJECT_DIR$/cleaned_data/异常数据/140.异常.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cleaned_data/异常数据/141.异常.csv" beforeDir="false" afterPath="$PROJECT_DIR$/cleaned_data/异常数据/141.异常.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cleaned_data/异常数据/142.异常.csv" beforeDir="false" afterPath="$PROJECT_DIR$/cleaned_data/异常数据/142.异常.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cleaned_data/异常数据/143.异常.csv" beforeDir="false" afterPath="$PROJECT_DIR$/cleaned_data/异常数据/143.异常.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cleaned_data/异常数据/144.异常.csv" beforeDir="false" afterPath="$PROJECT_DIR$/cleaned_data/异常数据/144.异常.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cleaned_data/异常数据/145.异常.csv" beforeDir="false" afterPath="$PROJECT_DIR$/cleaned_data/异常数据/145.异常.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cleaned_data/异常数据/146.异常.csv" beforeDir="false" afterPath="$PROJECT_DIR$/cleaned_data/异常数据/146.异常.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cleaned_data/异常数据/147.异常.csv" beforeDir="false" afterPath="$PROJECT_DIR$/cleaned_data/异常数据/147.异常.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cleaned_data/异常数据/148.异常.csv" beforeDir="false" afterPath="$PROJECT_DIR$/cleaned_data/异常数据/148.异常.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cleaned_data/异常数据/149.异常.csv" beforeDir="false" afterPath="$PROJECT_DIR$/cleaned_data/异常数据/149.异常.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cleaned_data/异常数据/15.异常.csv" beforeDir="false" afterPath="$PROJECT_DIR$/cleaned_data/异常数据/15.异常.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cleaned_data/异常数据/150.异常.csv" beforeDir="false" afterPath="$PROJECT_DIR$/cleaned_data/异常数据/150.异常.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cleaned_data/异常数据/151.异常.csv" beforeDir="false" afterPath="$PROJECT_DIR$/cleaned_data/异常数据/151.异常.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cleaned_data/异常数据/152.异常.csv" beforeDir="false" afterPath="$PROJECT_DIR$/cleaned_data/异常数据/152.异常.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cleaned_data/异常数据/153.异常.csv" beforeDir="false" afterPath="$PROJECT_DIR$/cleaned_data/异常数据/153.异常.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cleaned_data/异常数据/154.异常.csv" beforeDir="false" afterPath="$PROJECT_DIR$/cleaned_data/异常数据/154.异常.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cleaned_data/异常数据/155.异常.csv" beforeDir="false" afterPath="$PROJECT_DIR$/cleaned_data/异常数据/155.异常.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cleaned_data/异常数据/156.异常.csv" beforeDir="false" afterPath="$PROJECT_DIR$/cleaned_data/异常数据/156.异常.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cleaned_data/异常数据/157.异常.csv" beforeDir="false" afterPath="$PROJECT_DIR$/cleaned_data/异常数据/157.异常.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cleaned_data/异常数据/158.异常.csv" beforeDir="false" afterPath="$PROJECT_DIR$/cleaned_data/异常数据/158.异常.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cleaned_data/异常数据/159.异常.csv" beforeDir="false" afterPath="$PROJECT_DIR$/cleaned_data/异常数据/159.异常.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cleaned_data/异常数据/16.异常.csv" beforeDir="false" afterPath="$PROJECT_DIR$/cleaned_data/异常数据/16.异常.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cleaned_data/异常数据/160.异常.csv" beforeDir="false" afterPath="$PROJECT_DIR$/cleaned_data/异常数据/160.异常.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cleaned_data/异常数据/161.异常.csv" beforeDir="false" afterPath="$PROJECT_DIR$/cleaned_data/异常数据/161.异常.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cleaned_data/异常数据/162.异常.csv" beforeDir="false" afterPath="$PROJECT_DIR$/cleaned_data/异常数据/162.异常.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cleaned_data/异常数据/163.异常.csv" beforeDir="false" afterPath="$PROJECT_DIR$/cleaned_data/异常数据/163.异常.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cleaned_data/异常数据/164.异常.csv" beforeDir="false" afterPath="$PROJECT_DIR$/cleaned_data/异常数据/164.异常.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cleaned_data/异常数据/165.异常.csv" beforeDir="false" afterPath="$PROJECT_DIR$/cleaned_data/异常数据/165.异常.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cleaned_data/异常数据/166.异常.csv" beforeDir="false" afterPath="$PROJECT_DIR$/cleaned_data/异常数据/166.异常.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cleaned_data/异常数据/167.异常.csv" beforeDir="false" afterPath="$PROJECT_DIR$/cleaned_data/异常数据/167.异常.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cleaned_data/异常数据/168.异常.csv" beforeDir="false" afterPath="$PROJECT_DIR$/cleaned_data/异常数据/168.异常.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cleaned_data/异常数据/169.异常.csv" beforeDir="false" afterPath="$PROJECT_DIR$/cleaned_data/异常数据/169.异常.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cleaned_data/异常数据/17.异常.csv" beforeDir="false" afterPath="$PROJECT_DIR$/cleaned_data/异常数据/17.异常.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cleaned_data/异常数据/170.异常.csv" beforeDir="false" afterPath="$PROJECT_DIR$/cleaned_data/异常数据/170.异常.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cleaned_data/异常数据/171.异常.csv" beforeDir="false" afterPath="$PROJECT_DIR$/cleaned_data/异常数据/171.异常.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cleaned_data/异常数据/172.异常.csv" beforeDir="false" afterPath="$PROJECT_DIR$/cleaned_data/异常数据/172.异常.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cleaned_data/异常数据/173.异常.csv" beforeDir="false" afterPath="$PROJECT_DIR$/cleaned_data/异常数据/173.异常.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cleaned_data/异常数据/174.异常.csv" beforeDir="false" afterPath="$PROJECT_DIR$/cleaned_data/异常数据/174.异常.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cleaned_data/异常数据/175.异常.csv" beforeDir="false" afterPath="$PROJECT_DIR$/cleaned_data/异常数据/175.异常.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cleaned_data/异常数据/176.异常.csv" beforeDir="false" afterPath="$PROJECT_DIR$/cleaned_data/异常数据/176.异常.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cleaned_data/异常数据/177.异常.csv" beforeDir="false" afterPath="$PROJECT_DIR$/cleaned_data/异常数据/177.异常.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cleaned_data/异常数据/178.异常.csv" beforeDir="false" afterPath="$PROJECT_DIR$/cleaned_data/异常数据/178.异常.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cleaned_data/异常数据/179.异常.csv" beforeDir="false" afterPath="$PROJECT_DIR$/cleaned_data/异常数据/179.异常.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cleaned_data/异常数据/18.异常.csv" beforeDir="false" afterPath="$PROJECT_DIR$/cleaned_data/异常数据/18.异常.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cleaned_data/异常数据/180.异常.csv" beforeDir="false" afterPath="$PROJECT_DIR$/cleaned_data/异常数据/180.异常.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cleaned_data/异常数据/181.异常.csv" beforeDir="false" afterPath="$PROJECT_DIR$/cleaned_data/异常数据/181.异常.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cleaned_data/异常数据/182.异常.csv" beforeDir="false" afterPath="$PROJECT_DIR$/cleaned_data/异常数据/182.异常.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cleaned_data/异常数据/183.异常.csv" beforeDir="false" afterPath="$PROJECT_DIR$/cleaned_data/异常数据/183.异常.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cleaned_data/异常数据/184.异常.csv" beforeDir="false" afterPath="$PROJECT_DIR$/cleaned_data/异常数据/184.异常.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cleaned_data/异常数据/185.异常.csv" beforeDir="false" afterPath="$PROJECT_DIR$/cleaned_data/异常数据/185.异常.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cleaned_data/异常数据/186.异常.csv" beforeDir="false" afterPath="$PROJECT_DIR$/cleaned_data/异常数据/186.异常.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cleaned_data/异常数据/187.异常.csv" beforeDir="false" afterPath="$PROJECT_DIR$/cleaned_data/异常数据/187.异常.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cleaned_data/异常数据/188.异常.csv" beforeDir="false" afterPath="$PROJECT_DIR$/cleaned_data/异常数据/188.异常.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cleaned_data/异常数据/189.异常.csv" beforeDir="false" afterPath="$PROJECT_DIR$/cleaned_data/异常数据/189.异常.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cleaned_data/异常数据/19.异常.csv" beforeDir="false" afterPath="$PROJECT_DIR$/cleaned_data/异常数据/19.异常.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cleaned_data/异常数据/190.异常.csv" beforeDir="false" afterPath="$PROJECT_DIR$/cleaned_data/异常数据/190.异常.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cleaned_data/异常数据/191.异常.csv" beforeDir="false" afterPath="$PROJECT_DIR$/cleaned_data/异常数据/191.异常.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cleaned_data/异常数据/192.异常.csv" beforeDir="false" afterPath="$PROJECT_DIR$/cleaned_data/异常数据/192.异常.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cleaned_data/异常数据/193.异常.csv" beforeDir="false" afterPath="$PROJECT_DIR$/cleaned_data/异常数据/193.异常.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cleaned_data/异常数据/194.异常.csv" beforeDir="false" afterPath="$PROJECT_DIR$/cleaned_data/异常数据/194.异常.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cleaned_data/异常数据/195.异常.csv" beforeDir="false" afterPath="$PROJECT_DIR$/cleaned_data/异常数据/195.异常.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cleaned_data/异常数据/196.异常.csv" beforeDir="false" afterPath="$PROJECT_DIR$/cleaned_data/异常数据/196.异常.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cleaned_data/异常数据/197.异常.csv" beforeDir="false" afterPath="$PROJECT_DIR$/cleaned_data/异常数据/197.异常.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cleaned_data/异常数据/198.异常.csv" beforeDir="false" afterPath="$PROJECT_DIR$/cleaned_data/异常数据/198.异常.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cleaned_data/异常数据/199.异常.csv" beforeDir="false" afterPath="$PROJECT_DIR$/cleaned_data/异常数据/199.异常.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cleaned_data/异常数据/2.异常.csv" beforeDir="false" afterPath="$PROJECT_DIR$/cleaned_data/异常数据/2.异常.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cleaned_data/异常数据/20.异常.csv" beforeDir="false" afterPath="$PROJECT_DIR$/cleaned_data/异常数据/20.异常.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cleaned_data/异常数据/200.异常.csv" beforeDir="false" afterPath="$PROJECT_DIR$/cleaned_data/异常数据/200.异常.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cleaned_data/异常数据/201.异常.csv" beforeDir="false" afterPath="$PROJECT_DIR$/cleaned_data/异常数据/201.异常.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cleaned_data/异常数据/202.异常.csv" beforeDir="false" afterPath="$PROJECT_DIR$/cleaned_data/异常数据/202.异常.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cleaned_data/异常数据/203.异常.csv" beforeDir="false" afterPath="$PROJECT_DIR$/cleaned_data/异常数据/203.异常.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cleaned_data/异常数据/204.异常.csv" beforeDir="false" afterPath="$PROJECT_DIR$/cleaned_data/异常数据/204.异常.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cleaned_data/异常数据/205.异常.csv" beforeDir="false" afterPath="$PROJECT_DIR$/cleaned_data/异常数据/205.异常.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cleaned_data/异常数据/206.异常.csv" beforeDir="false" afterPath="$PROJECT_DIR$/cleaned_data/异常数据/206.异常.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cleaned_data/异常数据/207.异常.csv" beforeDir="false" afterPath="$PROJECT_DIR$/cleaned_data/异常数据/207.异常.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cleaned_data/异常数据/208.异常.csv" beforeDir="false" afterPath="$PROJECT_DIR$/cleaned_data/异常数据/208.异常.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cleaned_data/异常数据/209.异常.csv" beforeDir="false" afterPath="$PROJECT_DIR$/cleaned_data/异常数据/209.异常.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cleaned_data/异常数据/21.异常.csv" beforeDir="false" afterPath="$PROJECT_DIR$/cleaned_data/异常数据/21.异常.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cleaned_data/异常数据/210.异常.csv" beforeDir="false" afterPath="$PROJECT_DIR$/cleaned_data/异常数据/210.异常.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cleaned_data/异常数据/211.异常.csv" beforeDir="false" afterPath="$PROJECT_DIR$/cleaned_data/异常数据/211.异常.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cleaned_data/异常数据/212.异常.csv" beforeDir="false" afterPath="$PROJECT_DIR$/cleaned_data/异常数据/212.异常.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cleaned_data/异常数据/213.异常.csv" beforeDir="false" afterPath="$PROJECT_DIR$/cleaned_data/异常数据/213.异常.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cleaned_data/异常数据/214.异常.csv" beforeDir="false" afterPath="$PROJECT_DIR$/cleaned_data/异常数据/214.异常.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cleaned_data/异常数据/215.异常.csv" beforeDir="false" afterPath="$PROJECT_DIR$/cleaned_data/异常数据/215.异常.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cleaned_data/异常数据/216.异常.csv" beforeDir="false" afterPath="$PROJECT_DIR$/cleaned_data/异常数据/216.异常.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cleaned_data/异常数据/217.异常.csv" beforeDir="false" afterPath="$PROJECT_DIR$/cleaned_data/异常数据/217.异常.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cleaned_data/异常数据/218.异常.csv" beforeDir="false" afterPath="$PROJECT_DIR$/cleaned_data/异常数据/218.异常.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cleaned_data/异常数据/219.异常.csv" beforeDir="false" afterPath="$PROJECT_DIR$/cleaned_data/异常数据/219.异常.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cleaned_data/异常数据/22.异常.csv" beforeDir="false" afterPath="$PROJECT_DIR$/cleaned_data/异常数据/22.异常.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cleaned_data/异常数据/220.异常.csv" beforeDir="false" afterPath="$PROJECT_DIR$/cleaned_data/异常数据/220.异常.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cleaned_data/异常数据/221.异常.csv" beforeDir="false" afterPath="$PROJECT_DIR$/cleaned_data/异常数据/221.异常.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cleaned_data/异常数据/222.异常.csv" beforeDir="false" afterPath="$PROJECT_DIR$/cleaned_data/异常数据/222.异常.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cleaned_data/异常数据/223.异常.csv" beforeDir="false" afterPath="$PROJECT_DIR$/cleaned_data/异常数据/223.异常.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cleaned_data/异常数据/224.异常.csv" beforeDir="false" afterPath="$PROJECT_DIR$/cleaned_data/异常数据/224.异常.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cleaned_data/异常数据/225.异常.csv" beforeDir="false" afterPath="$PROJECT_DIR$/cleaned_data/异常数据/225.异常.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cleaned_data/异常数据/226.异常.csv" beforeDir="false" afterPath="$PROJECT_DIR$/cleaned_data/异常数据/226.异常.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cleaned_data/异常数据/227.异常.csv" beforeDir="false" afterPath="$PROJECT_DIR$/cleaned_data/异常数据/227.异常.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cleaned_data/异常数据/228.异常.csv" beforeDir="false" afterPath="$PROJECT_DIR$/cleaned_data/异常数据/228.异常.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cleaned_data/异常数据/229.异常.csv" beforeDir="false" afterPath="$PROJECT_DIR$/cleaned_data/异常数据/229.异常.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cleaned_data/异常数据/23.异常.csv" beforeDir="false" afterPath="$PROJECT_DIR$/cleaned_data/异常数据/23.异常.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cleaned_data/异常数据/230.异常.csv" beforeDir="false" afterPath="$PROJECT_DIR$/cleaned_data/异常数据/230.异常.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cleaned_data/异常数据/231.异常.csv" beforeDir="false" afterPath="$PROJECT_DIR$/cleaned_data/异常数据/231.异常.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cleaned_data/异常数据/232.异常.csv" beforeDir="false" afterPath="$PROJECT_DIR$/cleaned_data/异常数据/232.异常.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cleaned_data/异常数据/233.异常.csv" beforeDir="false" afterPath="$PROJECT_DIR$/cleaned_data/异常数据/233.异常.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cleaned_data/异常数据/234.异常.csv" beforeDir="false" afterPath="$PROJECT_DIR$/cleaned_data/异常数据/234.异常.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cleaned_data/异常数据/235.异常.csv" beforeDir="false" afterPath="$PROJECT_DIR$/cleaned_data/异常数据/235.异常.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cleaned_data/异常数据/236.异常.csv" beforeDir="false" afterPath="$PROJECT_DIR$/cleaned_data/异常数据/236.异常.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cleaned_data/异常数据/237.异常.csv" beforeDir="false" afterPath="$PROJECT_DIR$/cleaned_data/异常数据/237.异常.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cleaned_data/异常数据/238.异常.csv" beforeDir="false" afterPath="$PROJECT_DIR$/cleaned_data/异常数据/238.异常.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cleaned_data/异常数据/239.异常.csv" beforeDir="false" afterPath="$PROJECT_DIR$/cleaned_data/异常数据/239.异常.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cleaned_data/异常数据/24.异常.csv" beforeDir="false" afterPath="$PROJECT_DIR$/cleaned_data/异常数据/24.异常.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cleaned_data/异常数据/240.异常.csv" beforeDir="false" afterPath="$PROJECT_DIR$/cleaned_data/异常数据/240.异常.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cleaned_data/异常数据/241.异常.csv" beforeDir="false" afterPath="$PROJECT_DIR$/cleaned_data/异常数据/241.异常.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cleaned_data/异常数据/242.异常.csv" beforeDir="false" afterPath="$PROJECT_DIR$/cleaned_data/异常数据/242.异常.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cleaned_data/异常数据/243.异常.csv" beforeDir="false" afterPath="$PROJECT_DIR$/cleaned_data/异常数据/243.异常.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cleaned_data/异常数据/244.异常.csv" beforeDir="false" afterPath="$PROJECT_DIR$/cleaned_data/异常数据/244.异常.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cleaned_data/异常数据/245.异常.csv" beforeDir="false" afterPath="$PROJECT_DIR$/cleaned_data/异常数据/245.异常.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cleaned_data/异常数据/246.异常.csv" beforeDir="false" afterPath="$PROJECT_DIR$/cleaned_data/异常数据/246.异常.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cleaned_data/异常数据/247.异常.csv" beforeDir="false" afterPath="$PROJECT_DIR$/cleaned_data/异常数据/247.异常.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cleaned_data/异常数据/248.异常.csv" beforeDir="false" afterPath="$PROJECT_DIR$/cleaned_data/异常数据/248.异常.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cleaned_data/异常数据/249.异常.csv" beforeDir="false" afterPath="$PROJECT_DIR$/cleaned_data/异常数据/249.异常.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cleaned_data/异常数据/25.异常.csv" beforeDir="false" afterPath="$PROJECT_DIR$/cleaned_data/异常数据/25.异常.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cleaned_data/异常数据/250.异常.csv" beforeDir="false" afterPath="$PROJECT_DIR$/cleaned_data/异常数据/250.异常.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cleaned_data/异常数据/251.异常.csv" beforeDir="false" afterPath="$PROJECT_DIR$/cleaned_data/异常数据/251.异常.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cleaned_data/异常数据/252.异常.csv" beforeDir="false" afterPath="$PROJECT_DIR$/cleaned_data/异常数据/252.异常.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cleaned_data/异常数据/253.异常.csv" beforeDir="false" afterPath="$PROJECT_DIR$/cleaned_data/异常数据/253.异常.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cleaned_data/异常数据/254.异常.csv" beforeDir="false" afterPath="$PROJECT_DIR$/cleaned_data/异常数据/254.异常.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cleaned_data/异常数据/255.异常.csv" beforeDir="false" afterPath="$PROJECT_DIR$/cleaned_data/异常数据/255.异常.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cleaned_data/异常数据/256.异常.csv" beforeDir="false" afterPath="$PROJECT_DIR$/cleaned_data/异常数据/256.异常.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cleaned_data/异常数据/257.异常.csv" beforeDir="false" afterPath="$PROJECT_DIR$/cleaned_data/异常数据/257.异常.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cleaned_data/异常数据/258.异常.csv" beforeDir="false" afterPath="$PROJECT_DIR$/cleaned_data/异常数据/258.异常.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cleaned_data/异常数据/259.异常.csv" beforeDir="false" afterPath="$PROJECT_DIR$/cleaned_data/异常数据/259.异常.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cleaned_data/异常数据/26.异常.csv" beforeDir="false" afterPath="$PROJECT_DIR$/cleaned_data/异常数据/26.异常.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cleaned_data/异常数据/260.异常.csv" beforeDir="false" afterPath="$PROJECT_DIR$/cleaned_data/异常数据/260.异常.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cleaned_data/异常数据/261.异常.csv" beforeDir="false" afterPath="$PROJECT_DIR$/cleaned_data/异常数据/261.异常.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cleaned_data/异常数据/262.异常.csv" beforeDir="false" afterPath="$PROJECT_DIR$/cleaned_data/异常数据/262.异常.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cleaned_data/异常数据/263.异常.csv" beforeDir="false" afterPath="$PROJECT_DIR$/cleaned_data/异常数据/263.异常.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cleaned_data/异常数据/264.异常.csv" beforeDir="false" afterPath="$PROJECT_DIR$/cleaned_data/异常数据/264.异常.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cleaned_data/异常数据/265.异常.csv" beforeDir="false" afterPath="$PROJECT_DIR$/cleaned_data/异常数据/265.异常.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cleaned_data/异常数据/266.异常.csv" beforeDir="false" afterPath="$PROJECT_DIR$/cleaned_data/异常数据/266.异常.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cleaned_data/异常数据/267.异常.csv" beforeDir="false" afterPath="$PROJECT_DIR$/cleaned_data/异常数据/267.异常.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cleaned_data/异常数据/268.异常.csv" beforeDir="false" afterPath="$PROJECT_DIR$/cleaned_data/异常数据/268.异常.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cleaned_data/异常数据/269.异常.csv" beforeDir="false" afterPath="$PROJECT_DIR$/cleaned_data/异常数据/269.异常.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cleaned_data/异常数据/27.异常.csv" beforeDir="false" afterPath="$PROJECT_DIR$/cleaned_data/异常数据/27.异常.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cleaned_data/异常数据/270.异常.csv" beforeDir="false" afterPath="$PROJECT_DIR$/cleaned_data/异常数据/270.异常.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cleaned_data/异常数据/271.异常.csv" beforeDir="false" afterPath="$PROJECT_DIR$/cleaned_data/异常数据/271.异常.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cleaned_data/异常数据/272.异常.csv" beforeDir="false" afterPath="$PROJECT_DIR$/cleaned_data/异常数据/272.异常.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cleaned_data/异常数据/273.异常.csv" beforeDir="false" afterPath="$PROJECT_DIR$/cleaned_data/异常数据/273.异常.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cleaned_data/异常数据/274.异常.csv" beforeDir="false" afterPath="$PROJECT_DIR$/cleaned_data/异常数据/274.异常.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cleaned_data/异常数据/275.异常.csv" beforeDir="false" afterPath="$PROJECT_DIR$/cleaned_data/异常数据/275.异常.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cleaned_data/异常数据/276.异常.csv" beforeDir="false" afterPath="$PROJECT_DIR$/cleaned_data/异常数据/276.异常.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cleaned_data/异常数据/277.异常.csv" beforeDir="false" afterPath="$PROJECT_DIR$/cleaned_data/异常数据/277.异常.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cleaned_data/异常数据/278.异常.csv" beforeDir="false" afterPath="$PROJECT_DIR$/cleaned_data/异常数据/278.异常.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cleaned_data/异常数据/279.异常.csv" beforeDir="false" afterPath="$PROJECT_DIR$/cleaned_data/异常数据/279.异常.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cleaned_data/异常数据/28.异常.csv" beforeDir="false" afterPath="$PROJECT_DIR$/cleaned_data/异常数据/28.异常.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cleaned_data/异常数据/280.异常.csv" beforeDir="false" afterPath="$PROJECT_DIR$/cleaned_data/异常数据/280.异常.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cleaned_data/异常数据/281.异常.csv" beforeDir="false" afterPath="$PROJECT_DIR$/cleaned_data/异常数据/281.异常.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cleaned_data/异常数据/282.异常.csv" beforeDir="false" afterPath="$PROJECT_DIR$/cleaned_data/异常数据/282.异常.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cleaned_data/异常数据/283.异常.csv" beforeDir="false" afterPath="$PROJECT_DIR$/cleaned_data/异常数据/283.异常.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cleaned_data/异常数据/284.异常.csv" beforeDir="false" afterPath="$PROJECT_DIR$/cleaned_data/异常数据/284.异常.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cleaned_data/异常数据/285.异常.csv" beforeDir="false" afterPath="$PROJECT_DIR$/cleaned_data/异常数据/285.异常.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cleaned_data/异常数据/286.异常.csv" beforeDir="false" afterPath="$PROJECT_DIR$/cleaned_data/异常数据/286.异常.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cleaned_data/异常数据/287.异常.csv" beforeDir="false" afterPath="$PROJECT_DIR$/cleaned_data/异常数据/287.异常.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cleaned_data/异常数据/288.异常.csv" beforeDir="false" afterPath="$PROJECT_DIR$/cleaned_data/异常数据/288.异常.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cleaned_data/异常数据/289.异常.csv" beforeDir="false" afterPath="$PROJECT_DIR$/cleaned_data/异常数据/289.异常.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cleaned_data/异常数据/29.异常.csv" beforeDir="false" afterPath="$PROJECT_DIR$/cleaned_data/异常数据/29.异常.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cleaned_data/异常数据/290.异常.csv" beforeDir="false" afterPath="$PROJECT_DIR$/cleaned_data/异常数据/290.异常.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cleaned_data/异常数据/291.异常.csv" beforeDir="false" afterPath="$PROJECT_DIR$/cleaned_data/异常数据/291.异常.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cleaned_data/异常数据/292.异常.csv" beforeDir="false" afterPath="$PROJECT_DIR$/cleaned_data/异常数据/292.异常.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cleaned_data/异常数据/293.异常.csv" beforeDir="false" afterPath="$PROJECT_DIR$/cleaned_data/异常数据/293.异常.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cleaned_data/异常数据/294.异常.csv" beforeDir="false" afterPath="$PROJECT_DIR$/cleaned_data/异常数据/294.异常.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cleaned_data/异常数据/295.异常.csv" beforeDir="false" afterPath="$PROJECT_DIR$/cleaned_data/异常数据/295.异常.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cleaned_data/异常数据/296.异常.csv" beforeDir="false" afterPath="$PROJECT_DIR$/cleaned_data/异常数据/296.异常.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cleaned_data/异常数据/297.异常.csv" beforeDir="false" afterPath="$PROJECT_DIR$/cleaned_data/异常数据/297.异常.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cleaned_data/异常数据/298.异常.csv" beforeDir="false" afterPath="$PROJECT_DIR$/cleaned_data/异常数据/298.异常.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cleaned_data/异常数据/299.异常.csv" beforeDir="false" afterPath="$PROJECT_DIR$/cleaned_data/异常数据/299.异常.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cleaned_data/异常数据/3.异常.csv" beforeDir="false" afterPath="$PROJECT_DIR$/cleaned_data/异常数据/3.异常.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cleaned_data/异常数据/30.异常.csv" beforeDir="false" afterPath="$PROJECT_DIR$/cleaned_data/异常数据/30.异常.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cleaned_data/异常数据/300.异常.csv" beforeDir="false" afterPath="$PROJECT_DIR$/cleaned_data/异常数据/300.异常.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cleaned_data/异常数据/301.异常.csv" beforeDir="false" afterPath="$PROJECT_DIR$/cleaned_data/异常数据/301.异常.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cleaned_data/异常数据/302.异常.csv" beforeDir="false" afterPath="$PROJECT_DIR$/cleaned_data/异常数据/302.异常.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cleaned_data/异常数据/303.异常.csv" beforeDir="false" afterPath="$PROJECT_DIR$/cleaned_data/异常数据/303.异常.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cleaned_data/异常数据/304.异常.csv" beforeDir="false" afterPath="$PROJECT_DIR$/cleaned_data/异常数据/304.异常.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cleaned_data/异常数据/305.异常.csv" beforeDir="false" afterPath="$PROJECT_DIR$/cleaned_data/异常数据/305.异常.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cleaned_data/异常数据/306.异常.csv" beforeDir="false" afterPath="$PROJECT_DIR$/cleaned_data/异常数据/306.异常.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cleaned_data/异常数据/307.异常.csv" beforeDir="false" afterPath="$PROJECT_DIR$/cleaned_data/异常数据/307.异常.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cleaned_data/异常数据/308.异常.csv" beforeDir="false" afterPath="$PROJECT_DIR$/cleaned_data/异常数据/308.异常.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cleaned_data/异常数据/309.异常.csv" beforeDir="false" afterPath="$PROJECT_DIR$/cleaned_data/异常数据/309.异常.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cleaned_data/异常数据/31.异常.csv" beforeDir="false" afterPath="$PROJECT_DIR$/cleaned_data/异常数据/31.异常.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cleaned_data/异常数据/310.异常.csv" beforeDir="false" afterPath="$PROJECT_DIR$/cleaned_data/异常数据/310.异常.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cleaned_data/异常数据/311.异常.csv" beforeDir="false" afterPath="$PROJECT_DIR$/cleaned_data/异常数据/311.异常.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cleaned_data/异常数据/312.异常.csv" beforeDir="false" afterPath="$PROJECT_DIR$/cleaned_data/异常数据/312.异常.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cleaned_data/异常数据/313.异常.csv" beforeDir="false" afterPath="$PROJECT_DIR$/cleaned_data/异常数据/313.异常.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cleaned_data/异常数据/314.异常.csv" beforeDir="false" afterPath="$PROJECT_DIR$/cleaned_data/异常数据/314.异常.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cleaned_data/异常数据/315.异常.csv" beforeDir="false" afterPath="$PROJECT_DIR$/cleaned_data/异常数据/315.异常.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cleaned_data/异常数据/316.异常.csv" beforeDir="false" afterPath="$PROJECT_DIR$/cleaned_data/异常数据/316.异常.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cleaned_data/异常数据/317.异常.csv" beforeDir="false" afterPath="$PROJECT_DIR$/cleaned_data/异常数据/317.异常.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cleaned_data/异常数据/318.异常.csv" beforeDir="false" afterPath="$PROJECT_DIR$/cleaned_data/异常数据/318.异常.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cleaned_data/异常数据/319.异常.csv" beforeDir="false" afterPath="$PROJECT_DIR$/cleaned_data/异常数据/319.异常.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cleaned_data/异常数据/32.异常.csv" beforeDir="false" afterPath="$PROJECT_DIR$/cleaned_data/异常数据/32.异常.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cleaned_data/异常数据/320.异常.csv" beforeDir="false" afterPath="$PROJECT_DIR$/cleaned_data/异常数据/320.异常.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cleaned_data/异常数据/321.异常.csv" beforeDir="false" afterPath="$PROJECT_DIR$/cleaned_data/异常数据/321.异常.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cleaned_data/异常数据/322.异常.csv" beforeDir="false" afterPath="$PROJECT_DIR$/cleaned_data/异常数据/322.异常.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cleaned_data/异常数据/323.异常.csv" beforeDir="false" afterPath="$PROJECT_DIR$/cleaned_data/异常数据/323.异常.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cleaned_data/异常数据/324.异常.csv" beforeDir="false" afterPath="$PROJECT_DIR$/cleaned_data/异常数据/324.异常.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cleaned_data/异常数据/33.异常.csv" beforeDir="false" afterPath="$PROJECT_DIR$/cleaned_data/异常数据/33.异常.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cleaned_data/异常数据/34.异常.csv" beforeDir="false" afterPath="$PROJECT_DIR$/cleaned_data/异常数据/34.异常.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cleaned_data/异常数据/35.异常.csv" beforeDir="false" afterPath="$PROJECT_DIR$/cleaned_data/异常数据/35.异常.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cleaned_data/异常数据/36.异常.csv" beforeDir="false" afterPath="$PROJECT_DIR$/cleaned_data/异常数据/36.异常.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cleaned_data/异常数据/37.异常.csv" beforeDir="false" afterPath="$PROJECT_DIR$/cleaned_data/异常数据/37.异常.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cleaned_data/异常数据/38.异常.csv" beforeDir="false" afterPath="$PROJECT_DIR$/cleaned_data/异常数据/38.异常.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cleaned_data/异常数据/39.异常.csv" beforeDir="false" afterPath="$PROJECT_DIR$/cleaned_data/异常数据/39.异常.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cleaned_data/异常数据/4.异常.csv" beforeDir="false" afterPath="$PROJECT_DIR$/cleaned_data/异常数据/4.异常.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cleaned_data/异常数据/40.异常.csv" beforeDir="false" afterPath="$PROJECT_DIR$/cleaned_data/异常数据/40.异常.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cleaned_data/异常数据/41.异常.csv" beforeDir="false" afterPath="$PROJECT_DIR$/cleaned_data/异常数据/41.异常.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cleaned_data/异常数据/42.异常.csv" beforeDir="false" afterPath="$PROJECT_DIR$/cleaned_data/异常数据/42.异常.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cleaned_data/异常数据/43.异常.csv" beforeDir="false" afterPath="$PROJECT_DIR$/cleaned_data/异常数据/43.异常.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cleaned_data/异常数据/44.异常.csv" beforeDir="false" afterPath="$PROJECT_DIR$/cleaned_data/异常数据/44.异常.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cleaned_data/异常数据/45.异常.csv" beforeDir="false" afterPath="$PROJECT_DIR$/cleaned_data/异常数据/45.异常.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cleaned_data/异常数据/46.异常.csv" beforeDir="false" afterPath="$PROJECT_DIR$/cleaned_data/异常数据/46.异常.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cleaned_data/异常数据/47.异常.csv" beforeDir="false" afterPath="$PROJECT_DIR$/cleaned_data/异常数据/47.异常.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cleaned_data/异常数据/48.异常.csv" beforeDir="false" afterPath="$PROJECT_DIR$/cleaned_data/异常数据/48.异常.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cleaned_data/异常数据/49.异常.csv" beforeDir="false" afterPath="$PROJECT_DIR$/cleaned_data/异常数据/49.异常.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cleaned_data/异常数据/5.异常.csv" beforeDir="false" afterPath="$PROJECT_DIR$/cleaned_data/异常数据/5.异常.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cleaned_data/异常数据/50.异常.csv" beforeDir="false" afterPath="$PROJECT_DIR$/cleaned_data/异常数据/50.异常.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cleaned_data/异常数据/51.异常.csv" beforeDir="false" afterPath="$PROJECT_DIR$/cleaned_data/异常数据/51.异常.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cleaned_data/异常数据/52.异常.csv" beforeDir="false" afterPath="$PROJECT_DIR$/cleaned_data/异常数据/52.异常.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cleaned_data/异常数据/53.异常.csv" beforeDir="false" afterPath="$PROJECT_DIR$/cleaned_data/异常数据/53.异常.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cleaned_data/异常数据/54.异常.csv" beforeDir="false" afterPath="$PROJECT_DIR$/cleaned_data/异常数据/54.异常.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cleaned_data/异常数据/55.异常.csv" beforeDir="false" afterPath="$PROJECT_DIR$/cleaned_data/异常数据/55.异常.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cleaned_data/异常数据/56.异常.csv" beforeDir="false" afterPath="$PROJECT_DIR$/cleaned_data/异常数据/56.异常.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cleaned_data/异常数据/57.异常.csv" beforeDir="false" afterPath="$PROJECT_DIR$/cleaned_data/异常数据/57.异常.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cleaned_data/异常数据/58.异常.csv" beforeDir="false" afterPath="$PROJECT_DIR$/cleaned_data/异常数据/58.异常.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cleaned_data/异常数据/59.异常.csv" beforeDir="false" afterPath="$PROJECT_DIR$/cleaned_data/异常数据/59.异常.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cleaned_data/异常数据/6.异常.csv" beforeDir="false" afterPath="$PROJECT_DIR$/cleaned_data/异常数据/6.异常.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cleaned_data/异常数据/60.异常.csv" beforeDir="false" afterPath="$PROJECT_DIR$/cleaned_data/异常数据/60.异常.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cleaned_data/异常数据/61.异常.csv" beforeDir="false" afterPath="$PROJECT_DIR$/cleaned_data/异常数据/61.异常.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cleaned_data/异常数据/62.异常.csv" beforeDir="false" afterPath="$PROJECT_DIR$/cleaned_data/异常数据/62.异常.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cleaned_data/异常数据/63.异常.csv" beforeDir="false" afterPath="$PROJECT_DIR$/cleaned_data/异常数据/63.异常.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cleaned_data/异常数据/64.异常.csv" beforeDir="false" afterPath="$PROJECT_DIR$/cleaned_data/异常数据/64.异常.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cleaned_data/异常数据/65.异常.csv" beforeDir="false" afterPath="$PROJECT_DIR$/cleaned_data/异常数据/65.异常.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cleaned_data/异常数据/66.异常.csv" beforeDir="false" afterPath="$PROJECT_DIR$/cleaned_data/异常数据/66.异常.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cleaned_data/异常数据/67.异常.csv" beforeDir="false" afterPath="$PROJECT_DIR$/cleaned_data/异常数据/67.异常.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cleaned_data/异常数据/68.异常.csv" beforeDir="false" afterPath="$PROJECT_DIR$/cleaned_data/异常数据/68.异常.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cleaned_data/异常数据/69.异常.csv" beforeDir="false" afterPath="$PROJECT_DIR$/cleaned_data/异常数据/69.异常.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cleaned_data/异常数据/7.异常.csv" beforeDir="false" afterPath="$PROJECT_DIR$/cleaned_data/异常数据/7.异常.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cleaned_data/异常数据/70.异常.csv" beforeDir="false" afterPath="$PROJECT_DIR$/cleaned_data/异常数据/70.异常.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cleaned_data/异常数据/71.异常.csv" beforeDir="false" afterPath="$PROJECT_DIR$/cleaned_data/异常数据/71.异常.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cleaned_data/异常数据/72.异常.csv" beforeDir="false" afterPath="$PROJECT_DIR$/cleaned_data/异常数据/72.异常.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cleaned_data/异常数据/73.异常.csv" beforeDir="false" afterPath="$PROJECT_DIR$/cleaned_data/异常数据/73.异常.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cleaned_data/异常数据/74.异常.csv" beforeDir="false" afterPath="$PROJECT_DIR$/cleaned_data/异常数据/74.异常.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cleaned_data/异常数据/75.异常.csv" beforeDir="false" afterPath="$PROJECT_DIR$/cleaned_data/异常数据/75.异常.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cleaned_data/异常数据/76.异常.csv" beforeDir="false" afterPath="$PROJECT_DIR$/cleaned_data/异常数据/76.异常.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cleaned_data/异常数据/77.异常.csv" beforeDir="false" afterPath="$PROJECT_DIR$/cleaned_data/异常数据/77.异常.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cleaned_data/异常数据/78.异常.csv" beforeDir="false" afterPath="$PROJECT_DIR$/cleaned_data/异常数据/78.异常.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cleaned_data/异常数据/79.异常.csv" beforeDir="false" afterPath="$PROJECT_DIR$/cleaned_data/异常数据/79.异常.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cleaned_data/异常数据/8.异常.csv" beforeDir="false" afterPath="$PROJECT_DIR$/cleaned_data/异常数据/8.异常.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cleaned_data/异常数据/80.异常.csv" beforeDir="false" afterPath="$PROJECT_DIR$/cleaned_data/异常数据/80.异常.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cleaned_data/异常数据/81.异常.csv" beforeDir="false" afterPath="$PROJECT_DIR$/cleaned_data/异常数据/81.异常.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cleaned_data/异常数据/82.异常.csv" beforeDir="false" afterPath="$PROJECT_DIR$/cleaned_data/异常数据/82.异常.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cleaned_data/异常数据/83.异常.csv" beforeDir="false" afterPath="$PROJECT_DIR$/cleaned_data/异常数据/83.异常.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cleaned_data/异常数据/84.异常.csv" beforeDir="false" afterPath="$PROJECT_DIR$/cleaned_data/异常数据/84.异常.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cleaned_data/异常数据/85.异常.csv" beforeDir="false" afterPath="$PROJECT_DIR$/cleaned_data/异常数据/85.异常.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cleaned_data/异常数据/86.异常.csv" beforeDir="false" afterPath="$PROJECT_DIR$/cleaned_data/异常数据/86.异常.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cleaned_data/异常数据/87.异常.csv" beforeDir="false" afterPath="$PROJECT_DIR$/cleaned_data/异常数据/87.异常.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cleaned_data/异常数据/88.异常.csv" beforeDir="false" afterPath="$PROJECT_DIR$/cleaned_data/异常数据/88.异常.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cleaned_data/异常数据/89.异常.csv" beforeDir="false" afterPath="$PROJECT_DIR$/cleaned_data/异常数据/89.异常.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cleaned_data/异常数据/9.异常.csv" beforeDir="false" afterPath="$PROJECT_DIR$/cleaned_data/异常数据/9.异常.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cleaned_data/异常数据/90.异常.csv" beforeDir="false" afterPath="$PROJECT_DIR$/cleaned_data/异常数据/90.异常.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cleaned_data/异常数据/91.异常.csv" beforeDir="false" afterPath="$PROJECT_DIR$/cleaned_data/异常数据/91.异常.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cleaned_data/异常数据/92.异常.csv" beforeDir="false" afterPath="$PROJECT_DIR$/cleaned_data/异常数据/92.异常.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cleaned_data/异常数据/93.异常.csv" beforeDir="false" afterPath="$PROJECT_DIR$/cleaned_data/异常数据/93.异常.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cleaned_data/异常数据/94.异常.csv" beforeDir="false" afterPath="$PROJECT_DIR$/cleaned_data/异常数据/94.异常.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cleaned_data/异常数据/95.异常.csv" beforeDir="false" afterPath="$PROJECT_DIR$/cleaned_data/异常数据/95.异常.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cleaned_data/异常数据/96.异常.csv" beforeDir="false" afterPath="$PROJECT_DIR$/cleaned_data/异常数据/96.异常.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cleaned_data/异常数据/97.异常.csv" beforeDir="false" afterPath="$PROJECT_DIR$/cleaned_data/异常数据/97.异常.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cleaned_data/异常数据/98.异常.csv" beforeDir="false" afterPath="$PROJECT_DIR$/cleaned_data/异常数据/98.异常.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cleaned_data/异常数据/99.异常.csv" beforeDir="false" afterPath="$PROJECT_DIR$/cleaned_data/异常数据/99.异常.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cleaned_data/正常数据/1.正常.csv" beforeDir="false" afterPath="$PROJECT_DIR$/cleaned_data/正常数据/1.正常.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cleaned_data/正常数据/10.正常.csv" beforeDir="false" afterPath="$PROJECT_DIR$/cleaned_data/正常数据/10.正常.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cleaned_data/正常数据/100.正常.csv" beforeDir="false" afterPath="$PROJECT_DIR$/cleaned_data/正常数据/100.正常.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cleaned_data/正常数据/101.正常.csv" beforeDir="false" afterPath="$PROJECT_DIR$/cleaned_data/正常数据/101.正常.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cleaned_data/正常数据/102.正常.csv" beforeDir="false" afterPath="$PROJECT_DIR$/cleaned_data/正常数据/102.正常.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cleaned_data/正常数据/103.正常.csv" beforeDir="false" afterPath="$PROJECT_DIR$/cleaned_data/正常数据/103.正常.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cleaned_data/正常数据/104.正常.csv" beforeDir="false" afterPath="$PROJECT_DIR$/cleaned_data/正常数据/104.正常.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cleaned_data/正常数据/105.正常.csv" beforeDir="false" afterPath="$PROJECT_DIR$/cleaned_data/正常数据/105.正常.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cleaned_data/正常数据/106.正常.csv" beforeDir="false" afterPath="$PROJECT_DIR$/cleaned_data/正常数据/106.正常.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cleaned_data/正常数据/107.正常.csv" beforeDir="false" afterPath="$PROJECT_DIR$/cleaned_data/正常数据/107.正常.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cleaned_data/正常数据/108.正常.csv" beforeDir="false" afterPath="$PROJECT_DIR$/cleaned_data/正常数据/108.正常.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cleaned_data/正常数据/109.正常.csv" beforeDir="false" afterPath="$PROJECT_DIR$/cleaned_data/正常数据/109.正常.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cleaned_data/正常数据/11.正常.csv" beforeDir="false" afterPath="$PROJECT_DIR$/cleaned_data/正常数据/11.正常.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cleaned_data/正常数据/110.正常.csv" beforeDir="false" afterPath="$PROJECT_DIR$/cleaned_data/正常数据/110.正常.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cleaned_data/正常数据/111.正常.csv" beforeDir="false" afterPath="$PROJECT_DIR$/cleaned_data/正常数据/111.正常.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cleaned_data/正常数据/112.正常.csv" beforeDir="false" afterPath="$PROJECT_DIR$/cleaned_data/正常数据/112.正常.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cleaned_data/正常数据/113.正常.csv" beforeDir="false" afterPath="$PROJECT_DIR$/cleaned_data/正常数据/113.正常.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cleaned_data/正常数据/114.正常.csv" beforeDir="false" afterPath="$PROJECT_DIR$/cleaned_data/正常数据/114.正常.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cleaned_data/正常数据/115.正常.csv" beforeDir="false" afterPath="$PROJECT_DIR$/cleaned_data/正常数据/115.正常.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cleaned_data/正常数据/116.正常.csv" beforeDir="false" afterPath="$PROJECT_DIR$/cleaned_data/正常数据/116.正常.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cleaned_data/正常数据/117.正常.csv" beforeDir="false" afterPath="$PROJECT_DIR$/cleaned_data/正常数据/117.正常.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cleaned_data/正常数据/118.正常.csv" beforeDir="false" afterPath="$PROJECT_DIR$/cleaned_data/正常数据/118.正常.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cleaned_data/正常数据/119.正常.csv" beforeDir="false" afterPath="$PROJECT_DIR$/cleaned_data/正常数据/119.正常.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cleaned_data/正常数据/12.正常.csv" beforeDir="false" afterPath="$PROJECT_DIR$/cleaned_data/正常数据/12.正常.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cleaned_data/正常数据/120.正常.csv" beforeDir="false" afterPath="$PROJECT_DIR$/cleaned_data/正常数据/120.正常.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cleaned_data/正常数据/121.正常.csv" beforeDir="false" afterPath="$PROJECT_DIR$/cleaned_data/正常数据/121.正常.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cleaned_data/正常数据/122.正常.csv" beforeDir="false" afterPath="$PROJECT_DIR$/cleaned_data/正常数据/122.正常.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cleaned_data/正常数据/123.正常.csv" beforeDir="false" afterPath="$PROJECT_DIR$/cleaned_data/正常数据/123.正常.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cleaned_data/正常数据/124.正常.csv" beforeDir="false" afterPath="$PROJECT_DIR$/cleaned_data/正常数据/124.正常.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cleaned_data/正常数据/125.正常.csv" beforeDir="false" afterPath="$PROJECT_DIR$/cleaned_data/正常数据/125.正常.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cleaned_data/正常数据/126.正常.csv" beforeDir="false" afterPath="$PROJECT_DIR$/cleaned_data/正常数据/126.正常.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cleaned_data/正常数据/127.正常.csv" beforeDir="false" afterPath="$PROJECT_DIR$/cleaned_data/正常数据/127.正常.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cleaned_data/正常数据/128.正常.csv" beforeDir="false" afterPath="$PROJECT_DIR$/cleaned_data/正常数据/128.正常.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cleaned_data/正常数据/129.正常.csv" beforeDir="false" afterPath="$PROJECT_DIR$/cleaned_data/正常数据/129.正常.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cleaned_data/正常数据/13.正常.csv" beforeDir="false" afterPath="$PROJECT_DIR$/cleaned_data/正常数据/13.正常.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cleaned_data/正常数据/130.正常.csv" beforeDir="false" afterPath="$PROJECT_DIR$/cleaned_data/正常数据/130.正常.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cleaned_data/正常数据/131.正常.csv" beforeDir="false" afterPath="$PROJECT_DIR$/cleaned_data/正常数据/131.正常.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cleaned_data/正常数据/132.正常.csv" beforeDir="false" afterPath="$PROJECT_DIR$/cleaned_data/正常数据/132.正常.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cleaned_data/正常数据/133.正常.csv" beforeDir="false" afterPath="$PROJECT_DIR$/cleaned_data/正常数据/133.正常.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cleaned_data/正常数据/134.正常.csv" beforeDir="false" afterPath="$PROJECT_DIR$/cleaned_data/正常数据/134.正常.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cleaned_data/正常数据/135.正常.csv" beforeDir="false" afterPath="$PROJECT_DIR$/cleaned_data/正常数据/135.正常.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cleaned_data/正常数据/136.正常.csv" beforeDir="false" afterPath="$PROJECT_DIR$/cleaned_data/正常数据/136.正常.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cleaned_data/正常数据/137.正常.csv" beforeDir="false" afterPath="$PROJECT_DIR$/cleaned_data/正常数据/137.正常.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cleaned_data/正常数据/138.正常.csv" beforeDir="false" afterPath="$PROJECT_DIR$/cleaned_data/正常数据/138.正常.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cleaned_data/正常数据/139.正常.csv" beforeDir="false" afterPath="$PROJECT_DIR$/cleaned_data/正常数据/139.正常.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cleaned_data/正常数据/14.正常.csv" beforeDir="false" afterPath="$PROJECT_DIR$/cleaned_data/正常数据/14.正常.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cleaned_data/正常数据/140.正常.csv" beforeDir="false" afterPath="$PROJECT_DIR$/cleaned_data/正常数据/140.正常.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cleaned_data/正常数据/141.正常.csv" beforeDir="false" afterPath="$PROJECT_DIR$/cleaned_data/正常数据/141.正常.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cleaned_data/正常数据/142.正常.csv" beforeDir="false" afterPath="$PROJECT_DIR$/cleaned_data/正常数据/142.正常.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cleaned_data/正常数据/143.正常.csv" beforeDir="false" afterPath="$PROJECT_DIR$/cleaned_data/正常数据/143.正常.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cleaned_data/正常数据/144.正常.csv" beforeDir="false" afterPath="$PROJECT_DIR$/cleaned_data/正常数据/144.正常.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cleaned_data/正常数据/145.正常.csv" beforeDir="false" afterPath="$PROJECT_DIR$/cleaned_data/正常数据/145.正常.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cleaned_data/正常数据/146.正常.csv" beforeDir="false" afterPath="$PROJECT_DIR$/cleaned_data/正常数据/146.正常.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cleaned_data/正常数据/147.正常.csv" beforeDir="false" afterPath="$PROJECT_DIR$/cleaned_data/正常数据/147.正常.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cleaned_data/正常数据/148.正常.csv" beforeDir="false" afterPath="$PROJECT_DIR$/cleaned_data/正常数据/148.正常.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cleaned_data/正常数据/149.正常.csv" beforeDir="false" afterPath="$PROJECT_DIR$/cleaned_data/正常数据/149.正常.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cleaned_data/正常数据/15.正常.csv" beforeDir="false" afterPath="$PROJECT_DIR$/cleaned_data/正常数据/15.正常.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cleaned_data/正常数据/150.正常.csv" beforeDir="false" afterPath="$PROJECT_DIR$/cleaned_data/正常数据/150.正常.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cleaned_data/正常数据/151.正常.csv" beforeDir="false" afterPath="$PROJECT_DIR$/cleaned_data/正常数据/151.正常.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cleaned_data/正常数据/152.正常.csv" beforeDir="false" afterPath="$PROJECT_DIR$/cleaned_data/正常数据/152.正常.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cleaned_data/正常数据/153.正常.csv" beforeDir="false" afterPath="$PROJECT_DIR$/cleaned_data/正常数据/153.正常.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cleaned_data/正常数据/154.正常.csv" beforeDir="false" afterPath="$PROJECT_DIR$/cleaned_data/正常数据/154.正常.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cleaned_data/正常数据/155.正常.csv" beforeDir="false" afterPath="$PROJECT_DIR$/cleaned_data/正常数据/155.正常.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cleaned_data/正常数据/156.正常.csv" beforeDir="false" afterPath="$PROJECT_DIR$/cleaned_data/正常数据/156.正常.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cleaned_data/正常数据/157.正常.csv" beforeDir="false" afterPath="$PROJECT_DIR$/cleaned_data/正常数据/157.正常.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cleaned_data/正常数据/158.正常.csv" beforeDir="false" afterPath="$PROJECT_DIR$/cleaned_data/正常数据/158.正常.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cleaned_data/正常数据/159.正常.csv" beforeDir="false" afterPath="$PROJECT_DIR$/cleaned_data/正常数据/159.正常.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cleaned_data/正常数据/16.正常.csv" beforeDir="false" afterPath="$PROJECT_DIR$/cleaned_data/正常数据/16.正常.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cleaned_data/正常数据/160.正常.csv" beforeDir="false" afterPath="$PROJECT_DIR$/cleaned_data/正常数据/160.正常.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cleaned_data/正常数据/161.正常.csv" beforeDir="false" afterPath="$PROJECT_DIR$/cleaned_data/正常数据/161.正常.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cleaned_data/正常数据/162.正常.csv" beforeDir="false" afterPath="$PROJECT_DIR$/cleaned_data/正常数据/162.正常.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cleaned_data/正常数据/163.正常.csv" beforeDir="false" afterPath="$PROJECT_DIR$/cleaned_data/正常数据/163.正常.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cleaned_data/正常数据/164.正常.csv" beforeDir="false" afterPath="$PROJECT_DIR$/cleaned_data/正常数据/164.正常.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cleaned_data/正常数据/165.正常.csv" beforeDir="false" afterPath="$PROJECT_DIR$/cleaned_data/正常数据/165.正常.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cleaned_data/正常数据/166.正常.csv" beforeDir="false" afterPath="$PROJECT_DIR$/cleaned_data/正常数据/166.正常.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cleaned_data/正常数据/167.正常.csv" beforeDir="false" afterPath="$PROJECT_DIR$/cleaned_data/正常数据/167.正常.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cleaned_data/正常数据/168.正常.csv" beforeDir="false" afterPath="$PROJECT_DIR$/cleaned_data/正常数据/168.正常.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cleaned_data/正常数据/169.正常.csv" beforeDir="false" afterPath="$PROJECT_DIR$/cleaned_data/正常数据/169.正常.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cleaned_data/正常数据/17.正常.csv" beforeDir="false" afterPath="$PROJECT_DIR$/cleaned_data/正常数据/17.正常.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cleaned_data/正常数据/170.正常.csv" beforeDir="false" afterPath="$PROJECT_DIR$/cleaned_data/正常数据/170.正常.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cleaned_data/正常数据/171.正常.csv" beforeDir="false" afterPath="$PROJECT_DIR$/cleaned_data/正常数据/171.正常.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cleaned_data/正常数据/172.正常.csv" beforeDir="false" afterPath="$PROJECT_DIR$/cleaned_data/正常数据/172.正常.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cleaned_data/正常数据/173.正常.csv" beforeDir="false" afterPath="$PROJECT_DIR$/cleaned_data/正常数据/173.正常.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cleaned_data/正常数据/174.正常.csv" beforeDir="false" afterPath="$PROJECT_DIR$/cleaned_data/正常数据/174.正常.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cleaned_data/正常数据/175.正常.csv" beforeDir="false" afterPath="$PROJECT_DIR$/cleaned_data/正常数据/175.正常.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cleaned_data/正常数据/176.正常.csv" beforeDir="false" afterPath="$PROJECT_DIR$/cleaned_data/正常数据/176.正常.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cleaned_data/正常数据/177.正常.csv" beforeDir="false" afterPath="$PROJECT_DIR$/cleaned_data/正常数据/177.正常.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cleaned_data/正常数据/178.正常.csv" beforeDir="false" afterPath="$PROJECT_DIR$/cleaned_data/正常数据/178.正常.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cleaned_data/正常数据/179.正常.csv" beforeDir="false" afterPath="$PROJECT_DIR$/cleaned_data/正常数据/179.正常.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cleaned_data/正常数据/18.正常.csv" beforeDir="false" afterPath="$PROJECT_DIR$/cleaned_data/正常数据/18.正常.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cleaned_data/正常数据/180.正常.csv" beforeDir="false" afterPath="$PROJECT_DIR$/cleaned_data/正常数据/180.正常.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cleaned_data/正常数据/181.正常.csv" beforeDir="false" afterPath="$PROJECT_DIR$/cleaned_data/正常数据/181.正常.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cleaned_data/正常数据/182.正常.csv" beforeDir="false" afterPath="$PROJECT_DIR$/cleaned_data/正常数据/182.正常.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cleaned_data/正常数据/183.正常.csv" beforeDir="false" afterPath="$PROJECT_DIR$/cleaned_data/正常数据/183.正常.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cleaned_data/正常数据/184.正常.csv" beforeDir="false" afterPath="$PROJECT_DIR$/cleaned_data/正常数据/184.正常.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cleaned_data/正常数据/185.正常.csv" beforeDir="false" afterPath="$PROJECT_DIR$/cleaned_data/正常数据/185.正常.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cleaned_data/正常数据/186.正常.csv" beforeDir="false" afterPath="$PROJECT_DIR$/cleaned_data/正常数据/186.正常.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cleaned_data/正常数据/187.正常.csv" beforeDir="false" afterPath="$PROJECT_DIR$/cleaned_data/正常数据/187.正常.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cleaned_data/正常数据/188.正常.csv" beforeDir="false" afterPath="$PROJECT_DIR$/cleaned_data/正常数据/188.正常.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cleaned_data/正常数据/189.正常.csv" beforeDir="false" afterPath="$PROJECT_DIR$/cleaned_data/正常数据/189.正常.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cleaned_data/正常数据/19.正常.csv" beforeDir="false" afterPath="$PROJECT_DIR$/cleaned_data/正常数据/19.正常.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cleaned_data/正常数据/190.正常.csv" beforeDir="false" afterPath="$PROJECT_DIR$/cleaned_data/正常数据/190.正常.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cleaned_data/正常数据/191.正常.csv" beforeDir="false" afterPath="$PROJECT_DIR$/cleaned_data/正常数据/191.正常.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cleaned_data/正常数据/192.正常.csv" beforeDir="false" afterPath="$PROJECT_DIR$/cleaned_data/正常数据/192.正常.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cleaned_data/正常数据/193.正常.csv" beforeDir="false" afterPath="$PROJECT_DIR$/cleaned_data/正常数据/193.正常.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cleaned_data/正常数据/194.正常.csv" beforeDir="false" afterPath="$PROJECT_DIR$/cleaned_data/正常数据/194.正常.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cleaned_data/正常数据/195.正常.csv" beforeDir="false" afterPath="$PROJECT_DIR$/cleaned_data/正常数据/195.正常.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cleaned_data/正常数据/196.正常.csv" beforeDir="false" afterPath="$PROJECT_DIR$/cleaned_data/正常数据/196.正常.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cleaned_data/正常数据/197.正常.csv" beforeDir="false" afterPath="$PROJECT_DIR$/cleaned_data/正常数据/197.正常.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cleaned_data/正常数据/198.正常.csv" beforeDir="false" afterPath="$PROJECT_DIR$/cleaned_data/正常数据/198.正常.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cleaned_data/正常数据/199.正常.csv" beforeDir="false" afterPath="$PROJECT_DIR$/cleaned_data/正常数据/199.正常.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cleaned_data/正常数据/2.正常.csv" beforeDir="false" afterPath="$PROJECT_DIR$/cleaned_data/正常数据/2.正常.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cleaned_data/正常数据/20.正常.csv" beforeDir="false" afterPath="$PROJECT_DIR$/cleaned_data/正常数据/20.正常.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cleaned_data/正常数据/200.正常.csv" beforeDir="false" afterPath="$PROJECT_DIR$/cleaned_data/正常数据/200.正常.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cleaned_data/正常数据/201.正常.csv" beforeDir="false" afterPath="$PROJECT_DIR$/cleaned_data/正常数据/201.正常.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cleaned_data/正常数据/202.正常.csv" beforeDir="false" afterPath="$PROJECT_DIR$/cleaned_data/正常数据/202.正常.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cleaned_data/正常数据/203.正常.csv" beforeDir="false" afterPath="$PROJECT_DIR$/cleaned_data/正常数据/203.正常.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cleaned_data/正常数据/204.正常.csv" beforeDir="false" afterPath="$PROJECT_DIR$/cleaned_data/正常数据/204.正常.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cleaned_data/正常数据/205.正常.csv" beforeDir="false" afterPath="$PROJECT_DIR$/cleaned_data/正常数据/205.正常.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cleaned_data/正常数据/206.正常.csv" beforeDir="false" afterPath="$PROJECT_DIR$/cleaned_data/正常数据/206.正常.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cleaned_data/正常数据/207.正常.csv" beforeDir="false" afterPath="$PROJECT_DIR$/cleaned_data/正常数据/207.正常.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cleaned_data/正常数据/208.正常.csv" beforeDir="false" afterPath="$PROJECT_DIR$/cleaned_data/正常数据/208.正常.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cleaned_data/正常数据/209.正常.csv" beforeDir="false" afterPath="$PROJECT_DIR$/cleaned_data/正常数据/209.正常.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cleaned_data/正常数据/21.正常.csv" beforeDir="false" afterPath="$PROJECT_DIR$/cleaned_data/正常数据/21.正常.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cleaned_data/正常数据/210.正常.csv" beforeDir="false" afterPath="$PROJECT_DIR$/cleaned_data/正常数据/210.正常.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cleaned_data/正常数据/211.正常.csv" beforeDir="false" afterPath="$PROJECT_DIR$/cleaned_data/正常数据/211.正常.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cleaned_data/正常数据/212.正常.csv" beforeDir="false" afterPath="$PROJECT_DIR$/cleaned_data/正常数据/212.正常.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cleaned_data/正常数据/213.正常.csv" beforeDir="false" afterPath="$PROJECT_DIR$/cleaned_data/正常数据/213.正常.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cleaned_data/正常数据/214.正常.csv" beforeDir="false" afterPath="$PROJECT_DIR$/cleaned_data/正常数据/214.正常.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cleaned_data/正常数据/215.正常.csv" beforeDir="false" afterPath="$PROJECT_DIR$/cleaned_data/正常数据/215.正常.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cleaned_data/正常数据/216.正常.csv" beforeDir="false" afterPath="$PROJECT_DIR$/cleaned_data/正常数据/216.正常.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cleaned_data/正常数据/217.正常.csv" beforeDir="false" afterPath="$PROJECT_DIR$/cleaned_data/正常数据/217.正常.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cleaned_data/正常数据/218.正常.csv" beforeDir="false" afterPath="$PROJECT_DIR$/cleaned_data/正常数据/218.正常.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cleaned_data/正常数据/219.正常.csv" beforeDir="false" afterPath="$PROJECT_DIR$/cleaned_data/正常数据/219.正常.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cleaned_data/正常数据/22.正常.csv" beforeDir="false" afterPath="$PROJECT_DIR$/cleaned_data/正常数据/22.正常.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cleaned_data/正常数据/220.正常.csv" beforeDir="false" afterPath="$PROJECT_DIR$/cleaned_data/正常数据/220.正常.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cleaned_data/正常数据/221.正常.csv" beforeDir="false" afterPath="$PROJECT_DIR$/cleaned_data/正常数据/221.正常.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cleaned_data/正常数据/222.正常.csv" beforeDir="false" afterPath="$PROJECT_DIR$/cleaned_data/正常数据/222.正常.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cleaned_data/正常数据/223.正常.csv" beforeDir="false" afterPath="$PROJECT_DIR$/cleaned_data/正常数据/223.正常.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cleaned_data/正常数据/224.正常.csv" beforeDir="false" afterPath="$PROJECT_DIR$/cleaned_data/正常数据/224.正常.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cleaned_data/正常数据/225.正常.csv" beforeDir="false" afterPath="$PROJECT_DIR$/cleaned_data/正常数据/225.正常.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cleaned_data/正常数据/226.正常.csv" beforeDir="false" afterPath="$PROJECT_DIR$/cleaned_data/正常数据/226.正常.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cleaned_data/正常数据/227.正常.csv" beforeDir="false" afterPath="$PROJECT_DIR$/cleaned_data/正常数据/227.正常.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cleaned_data/正常数据/228.正常.csv" beforeDir="false" afterPath="$PROJECT_DIR$/cleaned_data/正常数据/228.正常.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cleaned_data/正常数据/229.正常.csv" beforeDir="false" afterPath="$PROJECT_DIR$/cleaned_data/正常数据/229.正常.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cleaned_data/正常数据/23.正常.csv" beforeDir="false" afterPath="$PROJECT_DIR$/cleaned_data/正常数据/23.正常.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cleaned_data/正常数据/230.正常.csv" beforeDir="false" afterPath="$PROJECT_DIR$/cleaned_data/正常数据/230.正常.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cleaned_data/正常数据/231.正常.csv" beforeDir="false" afterPath="$PROJECT_DIR$/cleaned_data/正常数据/231.正常.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cleaned_data/正常数据/232.正常.csv" beforeDir="false" afterPath="$PROJECT_DIR$/cleaned_data/正常数据/232.正常.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cleaned_data/正常数据/233.正常.csv" beforeDir="false" afterPath="$PROJECT_DIR$/cleaned_data/正常数据/233.正常.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cleaned_data/正常数据/234.正常.csv" beforeDir="false" afterPath="$PROJECT_DIR$/cleaned_data/正常数据/234.正常.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cleaned_data/正常数据/235.正常.csv" beforeDir="false" afterPath="$PROJECT_DIR$/cleaned_data/正常数据/235.正常.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cleaned_data/正常数据/236.正常.csv" beforeDir="false" afterPath="$PROJECT_DIR$/cleaned_data/正常数据/236.正常.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cleaned_data/正常数据/237.正常.csv" beforeDir="false" afterPath="$PROJECT_DIR$/cleaned_data/正常数据/237.正常.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cleaned_data/正常数据/238.正常.csv" beforeDir="false" afterPath="$PROJECT_DIR$/cleaned_data/正常数据/238.正常.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cleaned_data/正常数据/239.正常.csv" beforeDir="false" afterPath="$PROJECT_DIR$/cleaned_data/正常数据/239.正常.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cleaned_data/正常数据/24.正常.csv" beforeDir="false" afterPath="$PROJECT_DIR$/cleaned_data/正常数据/24.正常.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cleaned_data/正常数据/240.正常.csv" beforeDir="false" afterPath="$PROJECT_DIR$/cleaned_data/正常数据/240.正常.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cleaned_data/正常数据/241.正常.csv" beforeDir="false" afterPath="$PROJECT_DIR$/cleaned_data/正常数据/241.正常.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cleaned_data/正常数据/242.正常.csv" beforeDir="false" afterPath="$PROJECT_DIR$/cleaned_data/正常数据/242.正常.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cleaned_data/正常数据/243.正常.csv" beforeDir="false" afterPath="$PROJECT_DIR$/cleaned_data/正常数据/243.正常.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cleaned_data/正常数据/244.正常.csv" beforeDir="false" afterPath="$PROJECT_DIR$/cleaned_data/正常数据/244.正常.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cleaned_data/正常数据/245.正常.csv" beforeDir="false" afterPath="$PROJECT_DIR$/cleaned_data/正常数据/245.正常.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cleaned_data/正常数据/246.正常.csv" beforeDir="false" afterPath="$PROJECT_DIR$/cleaned_data/正常数据/246.正常.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cleaned_data/正常数据/247.正常.csv" beforeDir="false" afterPath="$PROJECT_DIR$/cleaned_data/正常数据/247.正常.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cleaned_data/正常数据/248.正常.csv" beforeDir="false" afterPath="$PROJECT_DIR$/cleaned_data/正常数据/248.正常.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cleaned_data/正常数据/249.正常.csv" beforeDir="false" afterPath="$PROJECT_DIR$/cleaned_data/正常数据/249.正常.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cleaned_data/正常数据/25.正常.csv" beforeDir="false" afterPath="$PROJECT_DIR$/cleaned_data/正常数据/25.正常.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cleaned_data/正常数据/250.正常.csv" beforeDir="false" afterPath="$PROJECT_DIR$/cleaned_data/正常数据/250.正常.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cleaned_data/正常数据/251.正常.csv" beforeDir="false" afterPath="$PROJECT_DIR$/cleaned_data/正常数据/251.正常.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cleaned_data/正常数据/252.正常.csv" beforeDir="false" afterPath="$PROJECT_DIR$/cleaned_data/正常数据/252.正常.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cleaned_data/正常数据/253.正常.csv" beforeDir="false" afterPath="$PROJECT_DIR$/cleaned_data/正常数据/253.正常.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cleaned_data/正常数据/254.正常.csv" beforeDir="false" afterPath="$PROJECT_DIR$/cleaned_data/正常数据/254.正常.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cleaned_data/正常数据/255.正常.csv" beforeDir="false" afterPath="$PROJECT_DIR$/cleaned_data/正常数据/255.正常.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cleaned_data/正常数据/256.正常.csv" beforeDir="false" afterPath="$PROJECT_DIR$/cleaned_data/正常数据/256.正常.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cleaned_data/正常数据/257.正常.csv" beforeDir="false" afterPath="$PROJECT_DIR$/cleaned_data/正常数据/257.正常.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cleaned_data/正常数据/258.正常.csv" beforeDir="false" afterPath="$PROJECT_DIR$/cleaned_data/正常数据/258.正常.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cleaned_data/正常数据/259.正常.csv" beforeDir="false" afterPath="$PROJECT_DIR$/cleaned_data/正常数据/259.正常.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cleaned_data/正常数据/26.正常.csv" beforeDir="false" afterPath="$PROJECT_DIR$/cleaned_data/正常数据/26.正常.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cleaned_data/正常数据/260.正常.csv" beforeDir="false" afterPath="$PROJECT_DIR$/cleaned_data/正常数据/260.正常.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cleaned_data/正常数据/261.正常.csv" beforeDir="false" afterPath="$PROJECT_DIR$/cleaned_data/正常数据/261.正常.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cleaned_data/正常数据/262.正常.csv" beforeDir="false" afterPath="$PROJECT_DIR$/cleaned_data/正常数据/262.正常.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cleaned_data/正常数据/263.正常.csv" beforeDir="false" afterPath="$PROJECT_DIR$/cleaned_data/正常数据/263.正常.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cleaned_data/正常数据/264.正常.csv" beforeDir="false" afterPath="$PROJECT_DIR$/cleaned_data/正常数据/264.正常.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cleaned_data/正常数据/265.正常.csv" beforeDir="false" afterPath="$PROJECT_DIR$/cleaned_data/正常数据/265.正常.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cleaned_data/正常数据/266.正常.csv" beforeDir="false" afterPath="$PROJECT_DIR$/cleaned_data/正常数据/266.正常.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cleaned_data/正常数据/267.正常.csv" beforeDir="false" afterPath="$PROJECT_DIR$/cleaned_data/正常数据/267.正常.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cleaned_data/正常数据/268.正常.csv" beforeDir="false" afterPath="$PROJECT_DIR$/cleaned_data/正常数据/268.正常.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cleaned_data/正常数据/269.正常.csv" beforeDir="false" afterPath="$PROJECT_DIR$/cleaned_data/正常数据/269.正常.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cleaned_data/正常数据/27.正常.csv" beforeDir="false" afterPath="$PROJECT_DIR$/cleaned_data/正常数据/27.正常.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cleaned_data/正常数据/270.正常.csv" beforeDir="false" afterPath="$PROJECT_DIR$/cleaned_data/正常数据/270.正常.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cleaned_data/正常数据/271.正常.csv" beforeDir="false" afterPath="$PROJECT_DIR$/cleaned_data/正常数据/271.正常.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cleaned_data/正常数据/272.正常.csv" beforeDir="false" afterPath="$PROJECT_DIR$/cleaned_data/正常数据/272.正常.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cleaned_data/正常数据/273.正常.csv" beforeDir="false" afterPath="$PROJECT_DIR$/cleaned_data/正常数据/273.正常.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cleaned_data/正常数据/274.正常.csv" beforeDir="false" afterPath="$PROJECT_DIR$/cleaned_data/正常数据/274.正常.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cleaned_data/正常数据/275.正常.csv" beforeDir="false" afterPath="$PROJECT_DIR$/cleaned_data/正常数据/275.正常.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cleaned_data/正常数据/276.正常.csv" beforeDir="false" afterPath="$PROJECT_DIR$/cleaned_data/正常数据/276.正常.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cleaned_data/正常数据/277.正常.csv" beforeDir="false" afterPath="$PROJECT_DIR$/cleaned_data/正常数据/277.正常.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cleaned_data/正常数据/278.正常.csv" beforeDir="false" afterPath="$PROJECT_DIR$/cleaned_data/正常数据/278.正常.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cleaned_data/正常数据/279.正常.csv" beforeDir="false" afterPath="$PROJECT_DIR$/cleaned_data/正常数据/279.正常.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cleaned_data/正常数据/28.正常.csv" beforeDir="false" afterPath="$PROJECT_DIR$/cleaned_data/正常数据/28.正常.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cleaned_data/正常数据/280.正常.csv" beforeDir="false" afterPath="$PROJECT_DIR$/cleaned_data/正常数据/280.正常.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cleaned_data/正常数据/281.正常.csv" beforeDir="false" afterPath="$PROJECT_DIR$/cleaned_data/正常数据/281.正常.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cleaned_data/正常数据/282.正常.csv" beforeDir="false" afterPath="$PROJECT_DIR$/cleaned_data/正常数据/282.正常.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cleaned_data/正常数据/283.正常.csv" beforeDir="false" afterPath="$PROJECT_DIR$/cleaned_data/正常数据/283.正常.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cleaned_data/正常数据/284.正常.csv" beforeDir="false" afterPath="$PROJECT_DIR$/cleaned_data/正常数据/284.正常.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cleaned_data/正常数据/285.正常.csv" beforeDir="false" afterPath="$PROJECT_DIR$/cleaned_data/正常数据/285.正常.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cleaned_data/正常数据/286.正常.csv" beforeDir="false" afterPath="$PROJECT_DIR$/cleaned_data/正常数据/286.正常.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cleaned_data/正常数据/287.正常.csv" beforeDir="false" afterPath="$PROJECT_DIR$/cleaned_data/正常数据/287.正常.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cleaned_data/正常数据/288.正常.csv" beforeDir="false" afterPath="$PROJECT_DIR$/cleaned_data/正常数据/288.正常.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cleaned_data/正常数据/289.正常.csv" beforeDir="false" afterPath="$PROJECT_DIR$/cleaned_data/正常数据/289.正常.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cleaned_data/正常数据/29.正常.csv" beforeDir="false" afterPath="$PROJECT_DIR$/cleaned_data/正常数据/29.正常.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cleaned_data/正常数据/290.正常.csv" beforeDir="false" afterPath="$PROJECT_DIR$/cleaned_data/正常数据/290.正常.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cleaned_data/正常数据/291.正常.csv" beforeDir="false" afterPath="$PROJECT_DIR$/cleaned_data/正常数据/291.正常.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cleaned_data/正常数据/292.正常.csv" beforeDir="false" afterPath="$PROJECT_DIR$/cleaned_data/正常数据/292.正常.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cleaned_data/正常数据/293.正常.csv" beforeDir="false" afterPath="$PROJECT_DIR$/cleaned_data/正常数据/293.正常.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cleaned_data/正常数据/294.正常.csv" beforeDir="false" afterPath="$PROJECT_DIR$/cleaned_data/正常数据/294.正常.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cleaned_data/正常数据/295.正常.csv" beforeDir="false" afterPath="$PROJECT_DIR$/cleaned_data/正常数据/295.正常.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cleaned_data/正常数据/296.正常.csv" beforeDir="false" afterPath="$PROJECT_DIR$/cleaned_data/正常数据/296.正常.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cleaned_data/正常数据/297.正常.csv" beforeDir="false" afterPath="$PROJECT_DIR$/cleaned_data/正常数据/297.正常.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cleaned_data/正常数据/298.正常.csv" beforeDir="false" afterPath="$PROJECT_DIR$/cleaned_data/正常数据/298.正常.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cleaned_data/正常数据/299.正常.csv" beforeDir="false" afterPath="$PROJECT_DIR$/cleaned_data/正常数据/299.正常.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cleaned_data/正常数据/3.正常.csv" beforeDir="false" afterPath="$PROJECT_DIR$/cleaned_data/正常数据/3.正常.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cleaned_data/正常数据/30.正常.csv" beforeDir="false" afterPath="$PROJECT_DIR$/cleaned_data/正常数据/30.正常.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cleaned_data/正常数据/300.正常.csv" beforeDir="false" afterPath="$PROJECT_DIR$/cleaned_data/正常数据/300.正常.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cleaned_data/正常数据/301.正常.csv" beforeDir="false" afterPath="$PROJECT_DIR$/cleaned_data/正常数据/301.正常.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cleaned_data/正常数据/302.正常.csv" beforeDir="false" afterPath="$PROJECT_DIR$/cleaned_data/正常数据/302.正常.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cleaned_data/正常数据/303.正常.csv" beforeDir="false" afterPath="$PROJECT_DIR$/cleaned_data/正常数据/303.正常.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cleaned_data/正常数据/304.正常.csv" beforeDir="false" afterPath="$PROJECT_DIR$/cleaned_data/正常数据/304.正常.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cleaned_data/正常数据/305.正常.csv" beforeDir="false" afterPath="$PROJECT_DIR$/cleaned_data/正常数据/305.正常.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cleaned_data/正常数据/306.正常.csv" beforeDir="false" afterPath="$PROJECT_DIR$/cleaned_data/正常数据/306.正常.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cleaned_data/正常数据/307.正常.csv" beforeDir="false" afterPath="$PROJECT_DIR$/cleaned_data/正常数据/307.正常.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cleaned_data/正常数据/308.正常.csv" beforeDir="false" afterPath="$PROJECT_DIR$/cleaned_data/正常数据/308.正常.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cleaned_data/正常数据/309.正常.csv" beforeDir="false" afterPath="$PROJECT_DIR$/cleaned_data/正常数据/309.正常.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cleaned_data/正常数据/31.正常.csv" beforeDir="false" afterPath="$PROJECT_DIR$/cleaned_data/正常数据/31.正常.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cleaned_data/正常数据/310.正常.csv" beforeDir="false" afterPath="$PROJECT_DIR$/cleaned_data/正常数据/310.正常.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cleaned_data/正常数据/311.正常.csv" beforeDir="false" afterPath="$PROJECT_DIR$/cleaned_data/正常数据/311.正常.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cleaned_data/正常数据/312.正常.csv" beforeDir="false" afterPath="$PROJECT_DIR$/cleaned_data/正常数据/312.正常.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cleaned_data/正常数据/313.正常.csv" beforeDir="false" afterPath="$PROJECT_DIR$/cleaned_data/正常数据/313.正常.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cleaned_data/正常数据/314.正常.csv" beforeDir="false" afterPath="$PROJECT_DIR$/cleaned_data/正常数据/314.正常.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cleaned_data/正常数据/315.正常.csv" beforeDir="false" afterPath="$PROJECT_DIR$/cleaned_data/正常数据/315.正常.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cleaned_data/正常数据/316.正常.csv" beforeDir="false" afterPath="$PROJECT_DIR$/cleaned_data/正常数据/316.正常.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cleaned_data/正常数据/317.正常.csv" beforeDir="false" afterPath="$PROJECT_DIR$/cleaned_data/正常数据/317.正常.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cleaned_data/正常数据/318.正常.csv" beforeDir="false" afterPath="$PROJECT_DIR$/cleaned_data/正常数据/318.正常.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cleaned_data/正常数据/319.正常.csv" beforeDir="false" afterPath="$PROJECT_DIR$/cleaned_data/正常数据/319.正常.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cleaned_data/正常数据/32.正常.csv" beforeDir="false" afterPath="$PROJECT_DIR$/cleaned_data/正常数据/32.正常.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cleaned_data/正常数据/320.正常.csv" beforeDir="false" afterPath="$PROJECT_DIR$/cleaned_data/正常数据/320.正常.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cleaned_data/正常数据/321.正常.csv" beforeDir="false" afterPath="$PROJECT_DIR$/cleaned_data/正常数据/321.正常.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cleaned_data/正常数据/322.正常.csv" beforeDir="false" afterPath="$PROJECT_DIR$/cleaned_data/正常数据/322.正常.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cleaned_data/正常数据/323.正常.csv" beforeDir="false" afterPath="$PROJECT_DIR$/cleaned_data/正常数据/323.正常.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cleaned_data/正常数据/324.正常.csv" beforeDir="false" afterPath="$PROJECT_DIR$/cleaned_data/正常数据/324.正常.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cleaned_data/正常数据/33.正常.csv" beforeDir="false" afterPath="$PROJECT_DIR$/cleaned_data/正常数据/33.正常.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cleaned_data/正常数据/34.正常.csv" beforeDir="false" afterPath="$PROJECT_DIR$/cleaned_data/正常数据/34.正常.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cleaned_data/正常数据/35.正常.csv" beforeDir="false" afterPath="$PROJECT_DIR$/cleaned_data/正常数据/35.正常.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cleaned_data/正常数据/36.正常.csv" beforeDir="false" afterPath="$PROJECT_DIR$/cleaned_data/正常数据/36.正常.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cleaned_data/正常数据/37.正常.csv" beforeDir="false" afterPath="$PROJECT_DIR$/cleaned_data/正常数据/37.正常.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cleaned_data/正常数据/38.正常.csv" beforeDir="false" afterPath="$PROJECT_DIR$/cleaned_data/正常数据/38.正常.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cleaned_data/正常数据/39.正常.csv" beforeDir="false" afterPath="$PROJECT_DIR$/cleaned_data/正常数据/39.正常.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cleaned_data/正常数据/4.正常.csv" beforeDir="false" afterPath="$PROJECT_DIR$/cleaned_data/正常数据/4.正常.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cleaned_data/正常数据/40.正常.csv" beforeDir="false" afterPath="$PROJECT_DIR$/cleaned_data/正常数据/40.正常.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cleaned_data/正常数据/41.正常.csv" beforeDir="false" afterPath="$PROJECT_DIR$/cleaned_data/正常数据/41.正常.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cleaned_data/正常数据/42.正常.csv" beforeDir="false" afterPath="$PROJECT_DIR$/cleaned_data/正常数据/42.正常.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cleaned_data/正常数据/43.正常.csv" beforeDir="false" afterPath="$PROJECT_DIR$/cleaned_data/正常数据/43.正常.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cleaned_data/正常数据/44.正常.csv" beforeDir="false" afterPath="$PROJECT_DIR$/cleaned_data/正常数据/44.正常.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cleaned_data/正常数据/45.正常.csv" beforeDir="false" afterPath="$PROJECT_DIR$/cleaned_data/正常数据/45.正常.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cleaned_data/正常数据/46.正常.csv" beforeDir="false" afterPath="$PROJECT_DIR$/cleaned_data/正常数据/46.正常.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cleaned_data/正常数据/47.正常.csv" beforeDir="false" afterPath="$PROJECT_DIR$/cleaned_data/正常数据/47.正常.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cleaned_data/正常数据/48.正常.csv" beforeDir="false" afterPath="$PROJECT_DIR$/cleaned_data/正常数据/48.正常.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cleaned_data/正常数据/49.正常.csv" beforeDir="false" afterPath="$PROJECT_DIR$/cleaned_data/正常数据/49.正常.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cleaned_data/正常数据/5.正常.csv" beforeDir="false" afterPath="$PROJECT_DIR$/cleaned_data/正常数据/5.正常.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cleaned_data/正常数据/50.正常.csv" beforeDir="false" afterPath="$PROJECT_DIR$/cleaned_data/正常数据/50.正常.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cleaned_data/正常数据/51.正常.csv" beforeDir="false" afterPath="$PROJECT_DIR$/cleaned_data/正常数据/51.正常.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cleaned_data/正常数据/52.正常.csv" beforeDir="false" afterPath="$PROJECT_DIR$/cleaned_data/正常数据/52.正常.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cleaned_data/正常数据/53.正常.csv" beforeDir="false" afterPath="$PROJECT_DIR$/cleaned_data/正常数据/53.正常.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cleaned_data/正常数据/54.正常.csv" beforeDir="false" afterPath="$PROJECT_DIR$/cleaned_data/正常数据/54.正常.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cleaned_data/正常数据/55.正常.csv" beforeDir="false" afterPath="$PROJECT_DIR$/cleaned_data/正常数据/55.正常.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cleaned_data/正常数据/56.正常.csv" beforeDir="false" afterPath="$PROJECT_DIR$/cleaned_data/正常数据/56.正常.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cleaned_data/正常数据/57.正常.csv" beforeDir="false" afterPath="$PROJECT_DIR$/cleaned_data/正常数据/57.正常.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cleaned_data/正常数据/58.正常.csv" beforeDir="false" afterPath="$PROJECT_DIR$/cleaned_data/正常数据/58.正常.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cleaned_data/正常数据/59.正常.csv" beforeDir="false" afterPath="$PROJECT_DIR$/cleaned_data/正常数据/59.正常.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cleaned_data/正常数据/6.正常.csv" beforeDir="false" afterPath="$PROJECT_DIR$/cleaned_data/正常数据/6.正常.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cleaned_data/正常数据/60.正常.csv" beforeDir="false" afterPath="$PROJECT_DIR$/cleaned_data/正常数据/60.正常.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cleaned_data/正常数据/61.正常.csv" beforeDir="false" afterPath="$PROJECT_DIR$/cleaned_data/正常数据/61.正常.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cleaned_data/正常数据/62.正常.csv" beforeDir="false" afterPath="$PROJECT_DIR$/cleaned_data/正常数据/62.正常.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cleaned_data/正常数据/63.正常.csv" beforeDir="false" afterPath="$PROJECT_DIR$/cleaned_data/正常数据/63.正常.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cleaned_data/正常数据/64.正常.csv" beforeDir="false" afterPath="$PROJECT_DIR$/cleaned_data/正常数据/64.正常.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cleaned_data/正常数据/65.正常.csv" beforeDir="false" afterPath="$PROJECT_DIR$/cleaned_data/正常数据/65.正常.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cleaned_data/正常数据/66.正常.csv" beforeDir="false" afterPath="$PROJECT_DIR$/cleaned_data/正常数据/66.正常.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cleaned_data/正常数据/67.正常.csv" beforeDir="false" afterPath="$PROJECT_DIR$/cleaned_data/正常数据/67.正常.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cleaned_data/正常数据/68.正常.csv" beforeDir="false" afterPath="$PROJECT_DIR$/cleaned_data/正常数据/68.正常.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cleaned_data/正常数据/69.正常.csv" beforeDir="false" afterPath="$PROJECT_DIR$/cleaned_data/正常数据/69.正常.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cleaned_data/正常数据/7.正常.csv" beforeDir="false" afterPath="$PROJECT_DIR$/cleaned_data/正常数据/7.正常.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cleaned_data/正常数据/70.正常.csv" beforeDir="false" afterPath="$PROJECT_DIR$/cleaned_data/正常数据/70.正常.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cleaned_data/正常数据/71.正常.csv" beforeDir="false" afterPath="$PROJECT_DIR$/cleaned_data/正常数据/71.正常.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cleaned_data/正常数据/72.正常.csv" beforeDir="false" afterPath="$PROJECT_DIR$/cleaned_data/正常数据/72.正常.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cleaned_data/正常数据/73.正常.csv" beforeDir="false" afterPath="$PROJECT_DIR$/cleaned_data/正常数据/73.正常.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cleaned_data/正常数据/74.正常.csv" beforeDir="false" afterPath="$PROJECT_DIR$/cleaned_data/正常数据/74.正常.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cleaned_data/正常数据/75.正常.csv" beforeDir="false" afterPath="$PROJECT_DIR$/cleaned_data/正常数据/75.正常.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cleaned_data/正常数据/76.正常.csv" beforeDir="false" afterPath="$PROJECT_DIR$/cleaned_data/正常数据/76.正常.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cleaned_data/正常数据/77.正常.csv" beforeDir="false" afterPath="$PROJECT_DIR$/cleaned_data/正常数据/77.正常.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cleaned_data/正常数据/78.正常.csv" beforeDir="false" afterPath="$PROJECT_DIR$/cleaned_data/正常数据/78.正常.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cleaned_data/正常数据/79.正常.csv" beforeDir="false" afterPath="$PROJECT_DIR$/cleaned_data/正常数据/79.正常.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cleaned_data/正常数据/8.正常.csv" beforeDir="false" afterPath="$PROJECT_DIR$/cleaned_data/正常数据/8.正常.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cleaned_data/正常数据/80.正常.csv" beforeDir="false" afterPath="$PROJECT_DIR$/cleaned_data/正常数据/80.正常.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cleaned_data/正常数据/81.正常.csv" beforeDir="false" afterPath="$PROJECT_DIR$/cleaned_data/正常数据/81.正常.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cleaned_data/正常数据/82.正常.csv" beforeDir="false" afterPath="$PROJECT_DIR$/cleaned_data/正常数据/82.正常.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cleaned_data/正常数据/83.正常.csv" beforeDir="false" afterPath="$PROJECT_DIR$/cleaned_data/正常数据/83.正常.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cleaned_data/正常数据/84.正常.csv" beforeDir="false" afterPath="$PROJECT_DIR$/cleaned_data/正常数据/84.正常.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cleaned_data/正常数据/85.正常.csv" beforeDir="false" afterPath="$PROJECT_DIR$/cleaned_data/正常数据/85.正常.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cleaned_data/正常数据/86.正常.csv" beforeDir="false" afterPath="$PROJECT_DIR$/cleaned_data/正常数据/86.正常.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cleaned_data/正常数据/87.正常.csv" beforeDir="false" afterPath="$PROJECT_DIR$/cleaned_data/正常数据/87.正常.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cleaned_data/正常数据/88.正常.csv" beforeDir="false" afterPath="$PROJECT_DIR$/cleaned_data/正常数据/88.正常.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cleaned_data/正常数据/89.正常.csv" beforeDir="false" afterPath="$PROJECT_DIR$/cleaned_data/正常数据/89.正常.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cleaned_data/正常数据/9.正常.csv" beforeDir="false" afterPath="$PROJECT_DIR$/cleaned_data/正常数据/9.正常.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cleaned_data/正常数据/90.正常.csv" beforeDir="false" afterPath="$PROJECT_DIR$/cleaned_data/正常数据/90.正常.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cleaned_data/正常数据/91.正常.csv" beforeDir="false" afterPath="$PROJECT_DIR$/cleaned_data/正常数据/91.正常.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cleaned_data/正常数据/92.正常.csv" beforeDir="false" afterPath="$PROJECT_DIR$/cleaned_data/正常数据/92.正常.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cleaned_data/正常数据/93.正常.csv" beforeDir="false" afterPath="$PROJECT_DIR$/cleaned_data/正常数据/93.正常.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cleaned_data/正常数据/94.正常.csv" beforeDir="false" afterPath="$PROJECT_DIR$/cleaned_data/正常数据/94.正常.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cleaned_data/正常数据/95.正常.csv" beforeDir="false" afterPath="$PROJECT_DIR$/cleaned_data/正常数据/95.正常.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cleaned_data/正常数据/96.正常.csv" beforeDir="false" afterPath="$PROJECT_DIR$/cleaned_data/正常数据/96.正常.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cleaned_data/正常数据/97.正常.csv" beforeDir="false" afterPath="$PROJECT_DIR$/cleaned_data/正常数据/97.正常.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cleaned_data/正常数据/98.正常.csv" beforeDir="false" afterPath="$PROJECT_DIR$/cleaned_data/正常数据/98.正常.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cleaned_data/正常数据/99.正常.csv" beforeDir="false" afterPath="$PROJECT_DIR$/cleaned_data/正常数据/99.正常.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/附件1：UWB数据集/Tag坐标信息.txt" beforeDir="false" afterPath="$PROJECT_DIR$/data/附件1：UWB数据集/Tag坐标信息.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/附件1：UWB数据集/异常数据/82.异常.txt" beforeDir="false" afterPath="$PROJECT_DIR$/data/附件1：UWB数据集/异常数据/82.异常.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/附件1：UWB数据集/异常数据/83.异常.txt" beforeDir="false" afterPath="$PROJECT_DIR$/data/附件1：UWB数据集/异常数据/83.异常.txt" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -27,25 +696,28 @@
     </file-type-list>
   </component>
   <component name="ProjectId" id="1zUVRVeai8SQiOuSBE8oKn5Jm2F" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
+    <property name="run.code.analysis.last.selected.profile" value="aDefault" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\lenovo\Desktop\contest" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.FanTao">
+  <component name="RunManager" selected="Python.FanTao2">
     <configuration name="FanTao" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="contest" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -59,6 +731,27 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/FanTao.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="FanTao2" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="contest" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/FanTao2.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -90,6 +783,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.FanTao2" />
         <item itemvalue="Python.FanTao" />
       </list>
     </recent_temporary>
@@ -134,7 +828,21 @@
       <option name="project" value="LOCAL" />
       <updated>1634278128963</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="批量清洗数据">
+      <created>1634283155524</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1634283155524</updated>
+    </task>
+    <task id="LOCAL-00006" summary="批量清洗数据">
+      <created>1634294259637</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1634294259637</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -150,10 +858,22 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <ignored-roots>
       <path value="$PROJECT_DIR$" />
     </ignored-roots>
     <MESSAGE value="批量清洗数据" />
     <option name="LAST_COMMIT_MESSAGE" value="批量清洗数据" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/FanTao2.py</url>
+          <line>111</line>
+          <option name="timeStamp" value="4" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>
