@@ -3,6 +3,27 @@
   <component name="CsvFileAttributes">
     <option name="attributeMap">
       <map>
+        <entry key="\cleaned_data\异常数据\1.异常.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="\cleaned_data\异常数据\14.异常.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="\cleaned_data\异常数据\8.异常.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
         <entry key="\cleaned_data\正常数据\1.正常.csv">
           <value>
             <Attribute>
@@ -24,7 +45,14 @@
             </Attribute>
           </value>
         </entry>
-        <entry key="\submit\task2\correct_data.csv">
+        <entry key="\submit\task2\abnormal_data.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="\submit\task2\normal_data.csv">
           <value>
             <Attribute>
               <option name="separator" value="," />

@@ -85,11 +85,11 @@ for _ in range(iteration_num):
 
 
 def getData(kind):
-    with open("submit/task2/correct_data.csv", "w+", newline="") as datacsv:
+    with open("submit/task2/normal_data.csv", "w+", newline="") as datacsv:
         # dialect为打开csv文件的方式，默认是excel，delimiter="\t"参数指写入的时候的分隔符
         csvwriter = csv.writer(datacsv, dialect=("excel"))
         # csv文件插入一行数据，把下面列表中的每一项放入一个单元格（可以用循环插入多行）
-        csvwriter.writerow(["Number", "x1", "y1", "z1", "x", "y", "z"])
+        csvwriter.writerow(["Number", "x1", "y1", "z1", "x", "y", "z", "xyz_error", "xy_error", "xz_error", "yz_error", "x_error", "y_error", "z_error"])
 
         correct_tag_position = pd.read_table("data/附件1：UWB数据集/Tag坐标信息.txt", delim_whitespace=True)  # 打开文件
         correct_tag_position = np.array(correct_tag_position.drop(columns=correct_tag_position.columns[0]))
@@ -99,6 +99,7 @@ def getData(kind):
             # last_line = np.array(data.tail(1))
             read_last_data(f"cleaned_data/{kind}数据/{index}.{kind}.csv")
             cluster_tag = np.array(calculate_4_tag_position())  # 产生4个可行点，用于聚类
+
             cluster_tag_mean = cluster_tag.mean(axis=0)
             cluster_tag_std = cluster_tag.std(axis=0)
             low_thre = cluster_tag_mean - cluster_tag_std * thre  # 去除离群点
@@ -112,9 +113,53 @@ def getData(kind):
             predicted_tag = np.around(cluster_tag.mean(axis=0)/10.0, 2)
 
             result = np.append(index, np.append(np.array(predicted_tag.T), np.array(correct_tag_position[index - 1])))
+            result = np.append(result, calculate_3D_error(result[1], result[2], result[3], result[4], result[5], result[6]))
+            result = np.append(result, calculate_2D_error(result[1], result[2], result[4], result[5]))
+            result = np.append(result, calculate_2D_error(result[1], result[3], result[4], result[6]))
+            result = np.append(result, calculate_2D_error(result[2], result[3], result[5], result[6]))
+            result = np.append(result, calculate_1D_error(result[1], result[4]))
+            result = np.append(result, calculate_1D_error(result[2], result[5]))
+            result = np.append(result, calculate_1D_error(result[3], result[6]))
+            result = np.around(result, 2)
             csvwriter.writerow(result)
 
+def test(D0, D1, D2, D3):
+    global d0, d1, d2, d3
+    d0, d1, d2, d3 = D0, D1, D2, D3  # 获取最后一行的A0-A3
+
+    tag = []
+    tag.append(root(A0_A1_A2_Positioning, [2500, 2500, 1500]).x)  # 初始点选了4个anchor的中点
+    tag.append(root(A0_A1_A3_Positioning, [2500, 2500, 1500]).x)  # 初始点选了4个anchor的中点
+    tag.append(root(A0_A2_A3_Positioning, [2500, 2500, 1500]).x)  # 初始点选了4个anchor的中点
+    tag.append(root(A1_A2_A3_Positioning, [2500, 2500, 1500]).x)  # 初始点选了4个anchor的中点
+
+    tag = np.array(tag)
+
+    tag = np.around(tag.mean(axis=0) / 10.0, 2)
+    # print(tag)
+    return np.array(tag)
+
+def calculate_3D_error(x1, y1, z1, x, y, z):
+    return (x1 - x) ** 2 + (y1 - y) ** 2 + (z1 - z) ** 2
+
+def calculate_2D_error(x1, y1,  x, y):
+    return (x1 - x) ** 2 + (y1 - y) ** 2
+
+def calculate_1D_error(x1,  x):
+    return abs(x1-x)
 
 if __name__ == '__main__':
     getData("正常")
+
+    # 计算测试数据只需注释getdata，赋值最开始的d0,d1,d2,d3即可，然后运行
+    # print(test(2980,4310,2820,4320))
+
+    # 计算各维度的平均误差，单位cm，计算数据时请注释
+    # error = pd.read_csv("submit/task2/normal_data.csv")
+    # error = np.array(error)
+    # average_error = error.mean(axis=0)
+    # average_error = np.around(average_error, 2)
+    # for i in range(7, 14):
+    #     print(average_error[i])
+
     breakpoint()
