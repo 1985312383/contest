@@ -6,40 +6,51 @@ import csv
 
 global d0, d1, d2, d3  # 即 A0,A1,A2,A3的测量值
 
+# 设置坐标
+len_x = 5000
+len_y = 5000
+len_z = 3000
+x_mid = len_x/2
+y_mid = len_y/2
+z_mid = len_z/2
+A0_z = 1300
+A1_z = 1700
+A2_z = 1700
+A3_z = 1300
 
 def A0_A1_A2_Positioning(Tag):
     x, y, z = Tag[0], Tag[1], Tag[2]
     return [
-        (x - 0) ** 2 + (y - 0) ** 2 + (z - 1300) ** 2 - d0 ** 2,  # A0距离约束
-        (x - 5000) ** 2 + (y - 0) ** 2 + (z - 1700) ** 2 - d1 ** 2,  # A1距离约束
-        (x - 0) ** 2 + (y - 5000) ** 2 + (z - 1700) ** 2 - d2 ** 2,  # A2距离约束
+        (x - 0) ** 2 + (y - 0) ** 2 + (z - A0_z) ** 2 - d0 ** 2,  # A0距离约束
+        (x - len_x) ** 2 + (y - 0) ** 2 + (z - A1_z) ** 2 - d1 ** 2,  # A1距离约束
+        (x - 0) ** 2 + (y - len_y) ** 2 + (z - A2_z) ** 2 - d2 ** 2,  # A2距离约束
     ]
 
 
 def A0_A1_A3_Positioning(Tag):
     x, y, z = Tag[0], Tag[1], Tag[2]
     return [
-        (x - 0) ** 2 + (y - 0) ** 2 + (z - 1300) ** 2 - d0 ** 2,  # A0距离约束
-        (x - 5000) ** 2 + (y - 0) ** 2 + (z - 1700) ** 2 - d1 ** 2,  # A1距离约束
-        (x - 5000) ** 2 + (y - 5000) ** 2 + (z - 1300) ** 2 - d3 ** 2,  # A3距离约束
+        (x - 0) ** 2 + (y - 0) ** 2 + (z - A0_z) ** 2 - d0 ** 2,  # A0距离约束
+        (x - len_x) ** 2 + (y - 0) ** 2 + (z - A1_z) ** 2 - d1 ** 2,  # A1距离约束
+        (x - len_x) ** 2 + (y - len_y) ** 2 + (z - A3_z) ** 2 - d3 ** 2,  # A3距离约束
     ]
 
 
 def A0_A2_A3_Positioning(Tag):
     x, y, z = Tag[0], Tag[1], Tag[2]
     return [
-        (x - 0) ** 2 + (y - 0) ** 2 + (z - 1300) ** 2 - d0 ** 2,  # A0距离约束
-        (x - 0) ** 2 + (y - 5000) ** 2 + (z - 1700) ** 2 - d2 ** 2,  # A2距离约束
-        (x - 5000) ** 2 + (y - 5000) ** 2 + (z - 1300) ** 2 - d3 ** 2,  # A3距离约束
+        (x - 0) ** 2 + (y - 0) ** 2 + (z - A0_z) ** 2 - d0 ** 2,  # A0距离约束
+        (x - 0) ** 2 + (y - len_y) ** 2 + (z - A2_z) ** 2 - d2 ** 2,  # A2距离约束
+        (x - len_x) ** 2 + (y - len_y) ** 2 + (z - A3_z) ** 2 - d3 ** 2,  # A3距离约束
     ]
 
 
 def A1_A2_A3_Positioning(Tag):
     x, y, z = Tag[0], Tag[1], Tag[2]
     return [
-        (x - 5000) ** 2 + (y - 0) ** 2 + (z - 1700) ** 2 - d1 ** 2,  # A1距离约束
-        (x - 0) ** 2 + (y - 5000) ** 2 + (z - 1700) ** 2 - d2 ** 2,  # A2距离约束
-        (x - 5000) ** 2 + (y - 5000) ** 2 + (z - 1300) ** 2 - d3 ** 2,  # A3距离约束
+        (x - 5000) ** 2 + (y - 0) ** 2 + (z - A1_z) ** 2 - d1 ** 2,  # A1距离约束
+        (x - 0) ** 2 + (y - len_y) ** 2 + (z - A2_z) ** 2 - d2 ** 2,  # A2距离约束
+        (x - len_x) ** 2 + (y - len_y) ** 2 + (z - A3_z) ** 2 - d3 ** 2,  # A3距离约束
     ]
 
 
@@ -61,35 +72,35 @@ def read_predict_data(file_path):
     tag = []
     if np.sum(lable > 10) == 1:
         if lable[0] > 10:
-            tag.append(root(A1_A2_A3_Positioning, [2500, 2500, 1500]).x)
+            tag.append(root(A1_A2_A3_Positioning, [x_mid, y_mid, len_z]).x)
         elif lable[1] > 10:
-            tag.append(root(A0_A2_A3_Positioning, [2500, 2500, 1500]).x)
+            tag.append(root(A0_A2_A3_Positioning, [x_mid, y_mid, len_z]).x)
         elif lable[2] > 10:
-            tag.append(root(A0_A1_A3_Positioning, [2500, 2500, 1500]).x)
+            tag.append(root(A0_A1_A3_Positioning, [x_mid, y_mid, len_z]).x)
         elif lable[3] > 10:
-            tag.append(root(A0_A1_A2_Positioning, [2500, 2500, 1500]).x)
+            tag.append(root(A0_A1_A2_Positioning, [x_mid, y_mid, len_z]).x)
     elif np.sum(lable > 10) > 1:
         if lable[0] > 10:
-            tag.append(root(A1_A2_A3_Positioning, [2500, 2500, 1500]).x)
+            tag.append(root(A1_A2_A3_Positioning, [x_mid, y_mid, len_z]).x)
         if lable[1] > 10:
-            tag.append(root(A0_A2_A3_Positioning, [2500, 2500, 1500]).x)
+            tag.append(root(A0_A2_A3_Positioning, [x_mid, y_mid, len_z]).x)
         if lable[2] > 10:
-            tag.append(root(A0_A1_A3_Positioning, [2500, 2500, 1500]).x)
+            tag.append(root(A0_A1_A3_Positioning, [x_mid, y_mid, len_z]).x)
         if lable[3] > 10:
-            tag.append(root(A0_A1_A2_Positioning, [2500, 2500, 1500]).x)
+            tag.append(root(A0_A1_A2_Positioning, [x_mid, y_mid, len_z]).x)
 
     tag = np.array(tag)
     if len(tag) > 1:
         for i in range(len(tag) - 1):
-            if (tag[i][0] > 5000) or (tag[i][0] < 0):
+            if (tag[i][0] > len_x) or (tag[i][0] < 0):
                 tag = np.delete(tag, obj=i, axis=0)
     if len(tag) > 1:
         for i in range(len(tag) - 1):
-            if tag[i][1] > 5000 or tag[i][1] < 0:
+            if tag[i][1] > len_y or tag[i][1] < 0:
                 tag = np.delete(tag, obj=i, axis=0)
     if len(tag) > 1:
         for i in range(len(tag) - 1):
-            if tag[i][2] > 3000 or tag[i][2] < 0:
+            if tag[i][2] > len_z or tag[i][2] < 0:
                 tag = np.delete(tag, obj=i, axis=0)
     # print(tag)
     return np.array(tag)
@@ -162,23 +173,23 @@ def test(D0, D1, D2, D3):
     d0, d1, d2, d3 = D0, D1, D2, D3  # 获取最后一行的A0-A3
 
     tag = []
-    tag.append(root(A0_A1_A2_Positioning, [2500, 2500, 1500]).x)  # 初始点选了4个anchor的中点
-    tag.append(root(A0_A1_A3_Positioning, [2500, 2500, 1500]).x)  # 初始点选了4个anchor的中点
-    tag.append(root(A0_A2_A3_Positioning, [2500, 2500, 1500]).x)  # 初始点选了4个anchor的中点
-    tag.append(root(A1_A2_A3_Positioning, [2500, 2500, 1500]).x)  # 初始点选了4个anchor的中点
+    tag.append(root(A0_A1_A2_Positioning, [x_mid, y_mid, len_z]).x)  # 初始点选了4个anchor的中点
+    tag.append(root(A0_A1_A3_Positioning, [x_mid, y_mid, len_z]).x)  # 初始点选了4个anchor的中点
+    tag.append(root(A0_A2_A3_Positioning, [x_mid, y_mid, len_z]).x)  # 初始点选了4个anchor的中点
+    tag.append(root(A1_A2_A3_Positioning, [x_mid, y_mid, len_z]).x)  # 初始点选了4个anchor的中点
 
     tag = np.array(tag)
     if len(tag) > 1:
         for i in range(len(tag) - 1):
-            if (tag[i][0] > 5000) or (tag[i][0] < 0):
+            if (tag[i][0] > len_x) or (tag[i][0] < 0):
                 tag = np.delete(tag, obj=i, axis=0)
     if len(tag) > 1:
         for i in range(len(tag) - 1):
-            if tag[i][1] > 5000 or tag[i][1] < 0:
+            if tag[i][1] > len_y or tag[i][1] < 0:
                 tag = np.delete(tag, obj=i, axis=0)
     if len(tag) > 1:
         for i in range(len(tag) - 1):
-            if tag[i][2] > 3000 or tag[i][2] < 0:
+            if tag[i][2] > len_z or tag[i][2] < 0:
                 tag = np.delete(tag, obj=i, axis=0)
 
     tag = np.around(tag.mean(axis=0) / 10.0, 2)
@@ -196,10 +207,10 @@ def calculate_1D_error(x1,  x):
     return abs(x1-x)
 
 if __name__ == '__main__':
-    # getData("异常")
+    getData("异常")
 
     # 计算测试数据只需注释getdata，赋值最开始的d0,d1,d2,d3即可，然后运行test
-    # print(test(5150,2120,5800,2770))
+    # print(test(1620,3950,2580,4440))
 
     #计算各维度的平均误差，单位cm，计算数据时请注释
     # error = pd.read_csv("submit/task2/abnormal_data.csv")

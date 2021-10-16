@@ -6,40 +6,51 @@ import csv
 
 global d0, d1, d2, d3  # 即 A0,A1,A2,A3的测量值
 
+# 设置坐标
+len_x = 5000
+len_y = 5000
+len_z = 3000
+x_mid = len_x/2
+y_mid = len_y/2
+z_mid = len_z/2
+A0_z = 1300
+A1_z = 1700
+A2_z = 1700
+A3_z = 1300
 
 def A0_A1_A2_Positioning(Tag):
     x, y, z = Tag[0], Tag[1], Tag[2]
     return [
-        (x - 0) ** 2 + (y - 0) ** 2 + (z - 1300) ** 2 - d0 ** 2,  # A0距离约束
-        (x - 5000) ** 2 + (y - 0) ** 2 + (z - 1700) ** 2 - d1 ** 2,  # A1距离约束
-        (x - 0) ** 2 + (y - 5000) ** 2 + (z - 1700) ** 2 - d2 ** 2,  # A2距离约束
+        (x - 0) ** 2 + (y - 0) ** 2 + (z - A0_z) ** 2 - d0 ** 2,  # A0距离约束
+        (x - len_x) ** 2 + (y - 0) ** 2 + (z - A1_z) ** 2 - d1 ** 2,  # A1距离约束
+        (x - 0) ** 2 + (y - len_y) ** 2 + (z - A2_z) ** 2 - d2 ** 2,  # A2距离约束
     ]
 
 
 def A0_A1_A3_Positioning(Tag):
     x, y, z = Tag[0], Tag[1], Tag[2]
     return [
-        (x - 0) ** 2 + (y - 0) ** 2 + (z - 1300) ** 2 - d0 ** 2,  # A0距离约束
-        (x - 5000) ** 2 + (y - 0) ** 2 + (z - 1700) ** 2 - d1 ** 2,  # A1距离约束
-        (x - 5000) ** 2 + (y - 5000) ** 2 + (z - 1300) ** 2 - d3 ** 2,  # A3距离约束
+        (x - 0) ** 2 + (y - 0) ** 2 + (z - A0_z) ** 2 - d0 ** 2,  # A0距离约束
+        (x - len_x) ** 2 + (y - 0) ** 2 + (z - A1_z) ** 2 - d1 ** 2,  # A1距离约束
+        (x - len_x) ** 2 + (y - len_y) ** 2 + (z - A3_z) ** 2 - d3 ** 2,  # A3距离约束
     ]
 
 
 def A0_A2_A3_Positioning(Tag):
     x, y, z = Tag[0], Tag[1], Tag[2]
     return [
-        (x - 0) ** 2 + (y - 0) ** 2 + (z - 1300) ** 2 - d0 ** 2,  # A0距离约束
-        (x - 0) ** 2 + (y - 5000) ** 2 + (z - 1700) ** 2 - d2 ** 2,  # A2距离约束
-        (x - 5000) ** 2 + (y - 5000) ** 2 + (z - 1300) ** 2 - d3 ** 2,  # A3距离约束
+        (x - 0) ** 2 + (y - 0) ** 2 + (z - A0_z) ** 2 - d0 ** 2,  # A0距离约束
+        (x - 0) ** 2 + (y - len_y) ** 2 + (z - A2_z) ** 2 - d2 ** 2,  # A2距离约束
+        (x - len_x) ** 2 + (y - len_y) ** 2 + (z - A3_z) ** 2 - d3 ** 2,  # A3距离约束
     ]
 
 
 def A1_A2_A3_Positioning(Tag):
     x, y, z = Tag[0], Tag[1], Tag[2]
     return [
-        (x - 5000) ** 2 + (y - 0) ** 2 + (z - 1700) ** 2 - d1 ** 2,  # A1距离约束
-        (x - 0) ** 2 + (y - 5000) ** 2 + (z - 1700) ** 2 - d2 ** 2,  # A2距离约束
-        (x - 5000) ** 2 + (y - 5000) ** 2 + (z - 1300) ** 2 - d3 ** 2,  # A3距离约束
+        (x - 5000) ** 2 + (y - 0) ** 2 + (z - A1_z) ** 2 - d1 ** 2,  # A1距离约束
+        (x - 0) ** 2 + (y - len_y) ** 2 + (z - A2_z) ** 2 - d2 ** 2,  # A2距离约束
+        (x - len_x) ** 2 + (y - len_y) ** 2 + (z - A3_z) ** 2 - d3 ** 2,  # A3距离约束
     ]
 
 
@@ -53,10 +64,10 @@ def read_last_data(file_path):
 
 def calculate_4_tag_position():
     tag = []
-    tag.append(root(A0_A1_A2_Positioning, [2500, 2500, 1500]).x)  # 初始点选了4个anchor的中点
-    tag.append(root(A0_A1_A3_Positioning, [2500, 2500, 1500]).x)  # 初始点选了4个anchor的中点
-    tag.append(root(A0_A2_A3_Positioning, [2500, 2500, 1500]).x)  # 初始点选了4个anchor的中点
-    tag.append(root(A1_A2_A3_Positioning, [2500, 2500, 1500]).x)  # 初始点选了4个anchor的中点
+    tag.append(root(A0_A1_A2_Positioning, [x_mid, y_mid, len_z]).x)  # 初始点选了4个anchor的中点
+    tag.append(root(A0_A1_A3_Positioning, [x_mid, y_mid, len_z]).x)  # 初始点选了4个anchor的中点
+    tag.append(root(A0_A2_A3_Positioning, [x_mid, y_mid, len_z]).x)  # 初始点选了4个anchor的中点
+    tag.append(root(A1_A2_A3_Positioning, [x_mid, y_mid, len_z]).x)  # 初始点选了4个anchor的中点
     return tag
 
 
@@ -128,10 +139,10 @@ def test(D0, D1, D2, D3):
     d0, d1, d2, d3 = D0, D1, D2, D3  # 获取最后一行的A0-A3
 
     tag = []
-    tag.append(root(A0_A1_A2_Positioning, [2500, 2500, 1500]).x)  # 初始点选了4个anchor的中点
-    tag.append(root(A0_A1_A3_Positioning, [2500, 2500, 1500]).x)  # 初始点选了4个anchor的中点
-    tag.append(root(A0_A2_A3_Positioning, [2500, 2500, 1500]).x)  # 初始点选了4个anchor的中点
-    tag.append(root(A1_A2_A3_Positioning, [2500, 2500, 1500]).x)  # 初始点选了4个anchor的中点
+    tag.append(root(A0_A1_A2_Positioning, [x_mid, y_mid, len_z]).x)  # 初始点选了4个anchor的中点
+    tag.append(root(A0_A1_A3_Positioning, [x_mid, y_mid, len_z]).x)  # 初始点选了4个anchor的中点
+    tag.append(root(A0_A2_A3_Positioning, [x_mid, y_mid, len_z]).x)  # 初始点选了4个anchor的中点
+    tag.append(root(A1_A2_A3_Positioning, [x_mid, y_mid, len_z]).x)  # 初始点选了4个anchor的中点
 
     tag = np.array(tag)
 
@@ -152,7 +163,7 @@ if __name__ == '__main__':
     getData("正常")
 
     # 计算测试数据只需注释getdata，赋值最开始的d0,d1,d2,d3即可，然后运行
-    # print(test(2980,4310,2820,4320))
+    # print(test(720,4520,3050,5380))
 
     # 计算各维度的平均误差，单位cm，计算数据时请注释
     # error = pd.read_csv("submit/task2/normal_data.csv")
