@@ -24,6 +24,20 @@
             </Attribute>
           </value>
         </entry>
+        <entry key="\submit\task1\所有文件的异常点数量统计.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="\submit\task1\正常数据\82.正常.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
         <entry key="\submit\task2\correct_data.csv">
           <value>
             <Attribute>

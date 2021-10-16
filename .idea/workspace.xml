@@ -7,7 +7,21 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="fc8808b1-84b7-49b9-acf6-9eee17eaa766" name="更改" comment="Merge remote-tracking branch 'origin/master'&#10;&#10;# Conflicts:&#10;#&#9;.idea/workspace.xml" />
+    <list default="true" id="fc8808b1-84b7-49b9-acf6-9eee17eaa766" name="更改" comment="Merge remote-tracking branch 'origin/master'&#10;&#10;# Conflicts:&#10;#&#9;.idea/workspace.xml&#10;第一次本地版本更新">
+      <change beforePath="$PROJECT_DIR$/.idea/contest.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/contest.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/csv-plugin.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/csv-plugin.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/1_plotFourPictures.py" beforeDir="false" afterPath="$PROJECT_DIR$/1_plotFourPictures.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/submit/task1/异常数据/1.异常.csv" beforeDir="false" afterPath="$PROJECT_DIR$/submit/task1/异常数据/1.异常.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/submit/task1/异常数据/1.异常.png" beforeDir="false" afterPath="$PROJECT_DIR$/submit/task1/异常数据/1.异常.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/submit/task1/异常数据/100.异常.csv" beforeDir="false" afterPath="$PROJECT_DIR$/submit/task1/异常数据/100.异常.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/submit/task1/异常数据/100.异常.png" beforeDir="false" afterPath="$PROJECT_DIR$/submit/task1/异常数据/100.异常.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/submit/task1/正常数据/109.正常.csv" beforeDir="false" afterPath="$PROJECT_DIR$/submit/task1/正常数据/109.正常.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/submit/task1/正常数据/109.正常.png" beforeDir="false" afterPath="$PROJECT_DIR$/submit/task1/正常数据/109.正常.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/submit/task1/正常数据/24.正常.csv" beforeDir="false" afterPath="$PROJECT_DIR$/submit/task1/正常数据/24.正常.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/submit/task1/正常数据/24.正常.png" beforeDir="false" afterPath="$PROJECT_DIR$/submit/task1/正常数据/24.正常.png" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -46,14 +60,35 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="run.code.analysis.last.selected.profile" value="aDefault" />
-    <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
+    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\lenovo\Desktop\contest" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.FanTao2">
+  <component name="RunManager" selected="Python.1_plotFourPictures">
+    <configuration name="1_plotFourPictures" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="contest" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/1_plotFourPictures.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <configuration name="FanTao" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="contest" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -119,6 +154,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.1_plotFourPictures" />
         <item itemvalue="Python.FanTao2" />
         <item itemvalue="Python.FanTao" />
       </list>
@@ -178,7 +214,21 @@
       <option name="project" value="LOCAL" />
       <updated>1634368255941</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Merge remote-tracking branch 'origin/master'&#10;&#10;# Conflicts:&#10;#&#9;.idea/workspace.xml&#10;第一次本地版本更新">
+      <created>1634369586106</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1634369586106</updated>
+    </task>
+    <task id="LOCAL-00008" summary="Merge remote-tracking branch 'origin/master'&#10;&#10;# Conflicts:&#10;#&#9;.idea/workspace.xml&#10;第一次本地版本更新">
+      <created>1634369596218</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1634369596218</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -201,7 +251,8 @@
     <MESSAGE value="批量清洗数据" />
     <MESSAGE value="task1" />
     <MESSAGE value="Merge remote-tracking branch 'origin/master'&#10;&#10;# Conflicts:&#10;#&#9;.idea/workspace.xml" />
-    <option name="LAST_COMMIT_MESSAGE" value="Merge remote-tracking branch 'origin/master'&#10;&#10;# Conflicts:&#10;#&#9;.idea/workspace.xml" />
+    <MESSAGE value="Merge remote-tracking branch 'origin/master'&#10;&#10;# Conflicts:&#10;#&#9;.idea/workspace.xml&#10;第一次本地版本更新" />
+    <option name="LAST_COMMIT_MESSAGE" value="Merge remote-tracking branch 'origin/master'&#10;&#10;# Conflicts:&#10;#&#9;.idea/workspace.xml&#10;第一次本地版本更新" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
