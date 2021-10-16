@@ -9,9 +9,10 @@ plt.rcParams['axes.unicode_minus'] = False  # 用来正常显示负号
 thre = 1.5  # 要调整的参数,这个是阈值
 iteration_num = 2  # 要调整的参数，这个是迭代次数
 
+
 def data_check(original_data, final_processed_data):
     plt.figure()
-    plt.title(u"4个UWB锚点在异常环境下的测量(原始数据)")
+    plt.title(u"4个UWB锚点在异常环境下的测量(离群点去除+卡尔曼滤波)")
     plt.xlabel(u"数据序号")
     plt.ylabel(u"测量值")
     for i in range(4):
@@ -21,6 +22,7 @@ def data_check(original_data, final_processed_data):
     plt.legend(loc="lower right")
     plt.show()
 
+
 def save_data(file_path: str, Measures):
     with open(file_path, "w+", newline="") as datacsv:
         # dialect为打开csv文件的方式，默认是excel，delimiter="\t"参数指写入的时候的分隔符
@@ -28,6 +30,7 @@ def save_data(file_path: str, Measures):
         # csv文件插入一行数据，把下面列表中的每一项放入一个单元格（可以用循环插入多行）
         csvwriter.writerow(["Number", "A0", "A1", "A2", "A3"])
         csvwriter.writerows(np.column_stack((np.arange(Measures.shape[1]), Measures.T)), )
+
 
 def KalmanFilter(z, n_iter=20):
     # 卡尔曼滤波
@@ -76,7 +79,6 @@ def data_process(file_path: str):
 
     initial_time = re.search(":.*:([0-9]*)", data[0], flags=0)  # 获取初始数据序列
     initial_time = int(initial_time.group(1))
-
     Measures = []
     for i in range(int(data_num)):
         measure = []
@@ -120,21 +122,64 @@ def data_process(file_path: str):
         raw_data = processed_device_data[i]
         xhat.append(KalmanFilter(raw_data, n_iter=len(raw_data)))
     xhat = np.array(xhat)
-    xhat = np.around(xhat, 1)   # 将滤波后的四组坐标值，保留一位小数
+    xhat = np.around(xhat, 1)  # 将滤波后的四组坐标值，保留一位小数
     return device_data, xhat  # device_data为原始数据,xhat是离群点去除且卡尔曼滤波后的数据
 
 
-'''
-请一组一组取消注释获得csv文件和数据比对图
-'''
+def clean_similar_data(final_processed_data, accuracy=10):
+    temp = final_processed_data[:, 0]
+    dissimilar_data = temp
+    for i in range(1, final_processed_data.shape[1] - 1):
+        distance = abs(final_processed_data[:, i + 1] - temp)
+        if distance[0] > accuracy or distance[1] > accuracy or distance[2] > accuracy or distance[3] > accuracy:
+            dissimilar_data = np.row_stack((dissimilar_data, final_processed_data[:, i + 1]))
+            temp = final_processed_data[:, i + 1]
+    dissimilar_data = dissimilar_data.T
+    return dissimilar_data
+
+
+def collect_dataset():
+    for i in range(1, 325):
+        file_path = "./data/附件1：UWB数据集/正常数据/" + str(i) + ".正常.txt"
+        original_data, final_processed_data = data_process(file_path)
+        save_data("./data/附件1：UWB数据集/dataset/normal_data/" + str(i) + ".normal" + ".csv", final_processed_data)
+
+    for i in range(1, 325):
+        file_path = "./data/附件1：UWB数据集/异常数据/" + str(i) + ".异常.txt"
+        original_data, final_processed_data = data_process(file_path)
+        save_data("./data/附件1：UWB数据集/dataset/abnormal_data/" + str(i) + ".abnormal" + ".csv", final_processed_data)
+
+
+def calculate_num_of_dissimilar_data(save_path):
+    normal_data = []
+    abnormal_data = []
+    for i in range(1, 325):
+        file_path = "./data/附件1：UWB数据集/正常数据/" + str(i) + ".正常.txt"
+        original_data, final_processed_data = data_process(file_path)
+        dissimilar_data = clean_similar_data(final_processed_data, accuracy=20)
+        normal_data.append(dissimilar_data.shape[1])
+
+    for i in range(1, 325):
+        file_path = "./data/附件1：UWB数据集/异常数据/" + str(i) + ".异常.txt"
+        original_data, final_processed_data = data_process(file_path)
+        dissimilar_data = clean_similar_data(final_processed_data, accuracy=20)
+        abnormal_data.append(dissimilar_data.shape[1])
+
+    with open(save_path, "w+", newline="") as datacsv:
+        # dialect为打开csv文件的方式，默认是excel，delimiter="\t"参数指写入的时候的分隔符
+        csvwriter = csv.writer(datacsv, dialect=("excel"))
+        # csv文件插入一行数据，把下面列表中的每一项放入一个单元格（可以用循环插入多行）
+        csvwriter.writerow(["Document Number", "The Number of Dissimilar Data"])
+
+
 if __name__ == '__main__':
-    # file_path = "data/附件1：UWB数据集/正常数据/24.正常.txt"
-    # file_path = "data/附件1：UWB数据集/正常数据/109.正常.txt"
-    # file_path = "data/附件1：UWB数据集/异常数据/1.异常.txt"
-    file_path = "data/附件1：UWB数据集/异常数据/100.异常.txt"
-    original_data, final_processed_data = data_process(file_path)
-    # save_data("submit/task1/正常数据/24.正常.csv", final_processed_data)
-    # save_data("submit/task1/正常数据/109.正常.csv", final_processed_data)
-    # save_data("submit/task1/异常数据/1.异常.csv", final_processed_data)
-    save_data("submit/task1/异常数据/100.异常.csv", final_processed_data)
-    data_check(original_data, final_processed_data)
+    calculate_num_of_dissimilar_data("./submit/task1/所有文件的异常点数量统计.csv")
+    file_path = ["data/附件1：UWB数据集/正常数据/24.正常.txt", "data/附件1：UWB数据集/正常数据/109.正常.txt", "data/附件1：UWB数据集/异常数据/1.异常.txt",
+                 "data/附件1：UWB数据集/异常数据/100.异常.txt"]
+    save_path = ["submit/task1/正常数据/24.正常.csv", "submit/task1/正常数据/109.正常.csv", "submit/task1/异常数据/1.异常.csv",
+                 "submit/task1/异常数据/100.异常.csv"]
+    for i in range(4):
+        original_data, final_processed_data = data_process(file_path[i])
+        dissimilar_data = clean_similar_data(final_processed_data, accuracy=20)
+        save_data(save_path[i], dissimilar_data)
+        data_check(original_data, final_processed_data)
